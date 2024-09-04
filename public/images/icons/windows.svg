@@ -1,0 +1,19 @@
+<svg id="Layer_51" data-name="Layer 51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.083" y1="1.035" x2="1.007" y2="0.035" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7a582a"/>
+      <stop offset="0.2" stop-color="#a07c47"/>
+      <stop offset="0.5" stop-color="#f7ebcf"/>
+      <stop offset="0.8" stop-color="#d0ad80"/>
+      <stop offset="1" stop-color="#b27e52"/>
+      <stop offset="1" stop-color="#ae774c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.893" y1="1.098" x2="2.293" y2="-0.266" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-1.517" y1="1.364" x2="1.668" y2="0" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-0.485" y1="1.57" x2="1.314" y2="-0.528" xlink:href="#linear-gradient"/>
+  </defs>
+  <path id="Path_64" data-name="Path 64" d="M59,6a.945.945,0,0,0,1-1V1a.945.945,0,0,0-1-1H1A.945.945,0,0,0,0,1V5A.945.945,0,0,0,1,6H4V54H1a.945.945,0,0,0-1,1v4a.945.945,0,0,0,1,1H59a.945.945,0,0,0,1-1V55a.945.945,0,0,0-1-1H56V6ZM58,56v2H2V56ZM6,54V6H54V54ZM55,4H2V2H58V4Z" fill="url(#linear-gradient)"/>
+  <path id="Path_65" data-name="Path 65" d="M27.5,8H9A.945.945,0,0,0,8,9V51a.945.945,0,0,0,1,1H27.5a.945.945,0,0,0,1-1V9A.945.945,0,0,0,27.5,8Zm-1,42H10V10H26.5Z" fill="url(#linear-gradient-2)"/>
+  <path id="Path_66" data-name="Path 66" d="M51,8H32.5a.945.945,0,0,0-1,1V51a.945.945,0,0,0,1,1H51a.945.945,0,0,0,1-1V9A.945.945,0,0,0,51,8ZM50,50H33.5V10H50Z" fill="url(#linear-gradient-3)"/>
+  <path id="Path_67" data-name="Path 67" d="M12.6,23.1a.967.967,0,0,1,0-1.4l4.3-4.3a.99.99,0,0,1,1.4,1.4L14,23.1a.967.967,0,0,1-1.4,0h0Zm.6,4.4a.967.967,0,0,0,1.4,0l9.3-9.3a.99.99,0,0,0-1.4-1.4h0l-9.3,9.3a.967.967,0,0,0,0,1.4ZM13,34.2a.908.908,0,0,0,.7-.3L22.6,25a.99.99,0,0,0-1.4-1.4l-8.9,8.9a.967.967,0,0,0,0,1.4.908.908,0,0,0,.7.3Zm24.4.1a.908.908,0,0,0,.7-.3l4.3-4.3A.99.99,0,0,0,41,28.3l-4.3,4.3a.967.967,0,0,0,0,1.4.908.908,0,0,0,.7.3h0Zm-.1,4a.967.967,0,0,0,1.4,0L48,29a.99.99,0,1,0-1.4-1.4h0l-9.3,9.3a.967.967,0,0,0,0,1.4Zm-.2,6.8a.908.908,0,0,0,.7-.3l8.9-8.9a.99.99,0,1,0-1.4-1.4l-8.9,8.9a.967.967,0,0,0,0,1.4.908.908,0,0,0,.7.3h0Z" fill="url(#linear-gradient-4)"/>
+</svg>
