@@ -168,6 +168,7 @@ Route::group([
         Route::group(['prefix' => '/investment', 'as' => 'investment.'], function () {
             Route::resources([
                 '{investment}/plan' => 'Plan\IndexController',
+                '{investment}/import' => 'Import\IndexController',
                 '{investment}/search' => 'Search\IndexController',
                 '{investment}/houses' => 'House\HouseController',
                 '{investment}/floors' => 'Floor\FloorController',

@@ -27,7 +27,10 @@ class Property extends Model
         'number_order',
         'rooms',
         'area',
+        'area_floor',
         'price',
+        'price_30',
+        'price_promotion',
         'garden_area',
         'balcony_area',
         'balcony_area_2',
@@ -118,6 +121,11 @@ class Property extends Model
     public function investment()
     {
         return $this->belongsTo('App\Models\Investment');
+    }
+
+    public function floor()
+    {
+        return $this->belongsTo('App\Models\Floor');
     }
 //    public static function boot()
 //    {

@@ -124,7 +124,11 @@
                                         @include('form-elements.html-input-text-count', ['label' => 'Opis w dymku', 'sublabel'=> 'Tylko dla garaży', 'name' => 'garage_text', 'value' => $entry->garage_text, 'maxlength' => 180])
 
                                         @include('form-elements.input-text', ['label' => 'Powierzchnia', 'name' => 'area', 'value' => $entry->area, 'required' => 1])
+                                        @include('form-elements.input-text', ['label' => 'Powierzchnia przy podłodze', 'name' => 'area_floor', 'value' => $entry->area_floor])
+
                                         @include('form-elements.input-text', ['label' => 'Cena', 'sublabel'=> 'Tylko liczby', 'name' => 'price', 'value' => $entry->price])
+                                        @include('form-elements.input-text', ['label' => 'Cena 30 dni', 'sublabel'=> 'Tylko liczby', 'name' => 'price_30', 'value' => $entry->price_30])
+                                        @include('form-elements.input-text', ['label' => 'Cena promocyjna', 'sublabel'=> 'Tylko liczby', 'name' => 'price_promotion', 'value' => $entry->price_promotion])
 
 
                                         @include('form-elements.input-text', ['label' => 'Ogródek', 'sublabel'=> 'Pow. w m<sup>2</sup>, tylko liczby', 'name' => 'garden_area', 'value' => $entry->garden_area])

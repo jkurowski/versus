@@ -12,27 +12,36 @@
         @include('admin.developro.investment_shared.menu')
 
         <div class="row">
-
+            @isset($count_property_status[1])
             <div class="col-3">
                 <div class="floor-status floor-status-1 rounded">
                     Na sprzedaż<b class="float-end">{{$count_property_status[1]}}</b>
                 </div>
             </div>
+            @endisset
+            @isset($count_property_status[2])
             <div class="col-3">
                 <div class="floor-status floor-status-2 rounded">
                     Rezerwacja<b class="float-end">{{$count_property_status[2]}}</b>
                 </div>
             </div>
+            @endisset
+
+            @isset($count_property_status[3])
             <div class="col-3">
                 <div class="floor-status floor-status-3 rounded">
                     Sprzedane<b class="float-end">{{$count_property_status[3]}}</b>
                 </div>
             </div>
+            @endisset
+
+            @isset($count_property_status[4])
             <div class="col-3">
                 <div class="floor-status floor-status-4 rounded">
                     Wynajęte<b class="float-end">{{$count_property_status[4]}}</b>
                 </div>
             </div>
+            @endisset
         </div>
 
         <div class="card mt-3">

@@ -5,9 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Building extends Model
 {
+    use HasTranslations;
+    public $translatable = ['name', 'meta_description', 'meta_title'];
+
     /**
      * The attributes that are mass assignable.
      *
