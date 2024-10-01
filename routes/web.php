@@ -34,10 +34,10 @@ Route::middleware(['restrictIp'])->group(function () {
             Route::get('/wykonczenie', 'Static\IndexController@wykonczenie')->defaults('locale', 'pl')->name('static.wykonczenie');
 
             // Developro
-            Route::group(['prefix'=>'/pietro', 'as' => 'front.investment.'], function() {
+            Route::group(['prefix'=>'/mieszkania', 'as' => 'front.investment.'], function() {
                 // Inwestycja budynkowa
 
-                Route::get('/budynek/{investment_id}/p/{floor}',
+                Route::get('/budynek/{investment_id}/p/{floor},{floorSlug}',
                     'Developro\InvestmentFloorController@index')->name('floor');
 
                 Route::get('/budynek/{investment_id}/p/{floor}/m/{property}',

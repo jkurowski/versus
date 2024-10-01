@@ -26,7 +26,7 @@
                             >@endif
                         </div>
                         <div class="btn-center">
-                            <a href="{{route('front.investment.floor', [$floor->investment_id, $floor->id])}}" class="btn btn-primary"
+                            <a href="{{route('front.investment.floor', [$property->building_id, $floor->id, Str::slug($floor->name)])}}" class="btn btn-primary"
                             ><span>plan piętra</span></a
                             >
                         </div>

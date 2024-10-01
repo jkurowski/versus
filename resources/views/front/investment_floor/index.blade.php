@@ -6,7 +6,7 @@
 
 @section('pageheader')
     @include('layouts.partials.developro-header', [
-    'title' => $investment->name.' - '.$floor->name,
+    'title' => $investment->name.' - '.$building->name.' - '.$floor->name,
     'header_file' => 'rooms.jpg',
     'items' => [
         ['uri'=> $current_locale.'/mieszkania', 'title' => 'Mieszkania']
@@ -15,81 +15,278 @@
 @stop
 
 @section('content')
-    <div id="floor" class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                @include('front.investment_shared.investment-filtr', ['area_range' => '25-45,45-65,65-85,85-110'])
-            </div>
-            <div id="sideMenu" class="col-12 col-lg-3 mt-3 mt-lg-5 pe-3 pe-lg-5">
-                <div class="floor-nav">
-                    @foreach($investments as $i)
-                        <h3>{{$i->name}}</h3>
-                        <ul class="list-unstyled">
-                            @foreach($i->floors as $f)
-                                @if($f->type == 1)
-                                <li @if($floor->id == $f->id) class="active" @endif ><a href="{{route('front.investment.floor', [$i->id, $f->id])}}">{{$f->name}}</a></li>
-                                @endif
-                            @endforeach
-                        </ul>
-                    @endforeach
-                </div>
-            </div>
-            <div class="col-12 col-lg-9 mt-0 mt-lg-5">
-                <span onclick="toggleNav()" class="toggleSideMenu"><i class="las la-bars"></i> Zmień piętro</span>
-                <div class="ps-0 ps-lg-5">
-                    @if($floor->file)
-                        <div id="plan-holder" style="margin:0 auto">
-                            <div>
-                                <img src="{{ asset('/investment/floor/webp/'.$floor->file_webp) }}" alt="{{$floor->name}}" id="invesmentplan" usemap="#invesmentplan">
-                                <map name="invesmentplan">
-                                    @if($properties)
-                                        @foreach($properties as $r)
-                                            @if($r->html)
-                                                <area
-                                                        shape="poly"
-                                                        data-item="{{$r->id}}"
-                                                        alt="{{$r->slug}}"
-                                                        data-roomnumber="{{$r->number}}"
-                                                        data-roomtype="{{$r->typ}}"
-                                                        data-roomstatus="{{$r->status}}"
-                                                        coords="{{cords($r->html)}}"
-                                                        class="inline status-{{$r->status}}" href="@if($r->status <> 3) {{route('front.investment.property', ['investment_id' => $investment->id, 'floor' => $floor->id, 'property' => $r->id])}} @else # @endif" title="<h4 class='mb-2'>{{$r->name}}</h4><ul class='mb-0 list-unstyled mt-0'><li>Powierzchnia: <b class=fr>{{$r->area}} m<sup>2</sup></b></li><li>Pokoje: <b class=fr>{{$r->rooms}}</b></li><li><b>{{ roomStatus($r->status) }}</b></li></ul>">
-                                            @endif
-                                        @endforeach
-                                    @endif
-                                </map>
-                            </div>
+    <section class="pt-3 pt-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="apartment-btns">
+                        <div class="btn-prev">
+                            @if($prev_floor) <a href="{{route('front.investment.floor', [$building->id, $prev_floor, Str::slug($prev_floor->name)])}}" class="btn btn-primary"
+                            ><span>Piętro niżej</span></a
+                            >@endif
                         </div>
-                    @endif
-                        @include('front.investment_shared.filtr', ['area_range' => $floor->area_range])
-
-                        @include('front.investment_shared.list', ['investment' => $investment])
+                        <div class="btn-center">
+                            <a href="{{ route('plan') }}" class="btn btn-primary"
+                            ><span>Plan inwestycji</span></a
+                            >
+                        </div>
+                        <div class="btn-next">
+                            @if($next_floor) <a href="{{route('front.investment.floor', [$building->id, $next_floor, Str::slug($next_floor->name)])}}" class="btn btn-primary"
+                            ><span>Piętro wyżej</span></a
+                            >@endif
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    @if($floor->file)
+                        <img src="{{ asset('/investment/floor/webp/'.$floor->file_webp) }}" alt="{{$floor->name}}" id="invesmentplan" usemap="#invesmentplan">
+                        <map name="invesmentplan">
+                            @if($properties)
+                                @foreach($properties as $r)
+                                    @if($r->html)
+                                        <area
+                                                shape="poly"
+                                                data-item="{{$r->id}}"
+                                                alt="{{$r->slug}}"
+                                                data-roomnumber="{{$r->number}}"
+                                                data-roomtype="{{$r->typ}}"
+                                                data-roomstatus="{{$r->status}}"
+                                                coords="{{cords($r->html)}}"
+                                                class="inline status-{{$r->status}}" href="@if($r->status <> 3) {{route('front.investment.property', ['investment_id' => $investment->id, 'floor' => $floor->id, 'property' => $r->id])}} @else # @endif" title="<h4 class='mb-2'>{{$r->name}}</h4><ul class='mb-0 list-unstyled mt-0'><li>Powierzchnia: <b class=fr>{{$r->area}} m<sup>2</sup></b></li><li>Pokoje: <b class=fr>{{$r->rooms}}</b></li><li><b>{{ roomStatus($r->status) }}</b></li></ul>">
+                                    @endif
+                                @endforeach
+                            @endif
+                        </map>
+                    @endif
+                </div>
+            </div>
+            <!-- FORM -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 apartments-form-col">
+                    <form class="apartments-form" method="get" action="">
+                        <select name="" id="" class="form-select apartments-form-select" aria-label="Powierzchnia">
+                            <option selected="">Powierzchnia</option>
+                            {!! area2Select($floor->area_range) !!}
+                        </select>
+                        <select name="" id="" class="form-select apartments-form-select" aria-label="Pokoje">
+                            <option selected="">Liczba pokoi</option>
+                            @foreach($uniqueRooms as $room)
+                                <option value="{{ $room }}" @if(request()->input('rooms') == $room) selected @endif >{{ $room }}</option>
+                            @endforeach
+                        </select>
+                        <select name="" id="" class="form-select apartments-form-select" aria-label="Status">
+                            <option value="">Status</option>
+                            <option value="1" @if(request()->input('status') == 1) selected @endif >Na sprzedaż</option>
+                            <option value="2" @if(request()->input('status') == 2) selected @endif >Rezerwacja</option>
+                            <option value="3" @if(request()->input('status') == 3) selected @endif >Sprzedane</option>
+                        </select>
+                        <button class="btn btn-primary d-flex align-items-center gap-2" type="button">
+                            <span> Szukaj </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row apartment-row align-items-center">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row-grid-btns py-4">
+                        <div class="grid-btn">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 32 32"
+                            >
+                                <g
+                                        id="Group_410"
+                                        data-name="Group 410"
+                                        transform="translate(-1451 -1192)"
+                                >
+                                    <g
+                                            id="Rectangle_283"
+                                            data-name="Rectangle 283"
+                                            transform="translate(1470 1211)"
+                                            fill="none"
+                                            stroke="#292929"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="13" height="13" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="12"
+                                                height="12"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_284"
+                                            data-name="Rectangle 284"
+                                            transform="translate(1451 1211)"
+                                            fill="none"
+                                            stroke="#292929"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="13" height="13" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="12"
+                                                height="12"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_285"
+                                            data-name="Rectangle 285"
+                                            transform="translate(1451 1192)"
+                                            fill="none"
+                                            stroke="#292929"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="13" height="13" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="12"
+                                                height="12"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_286"
+                                            data-name="Rectangle 286"
+                                            transform="translate(1470 1192)"
+                                            fill="none"
+                                            stroke="#292929"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="13" height="13" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="12"
+                                                height="12"
+                                                fill="none"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="row-btn active">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 32 32"
+                            >
+                                <g
+                                        id="Group_411"
+                                        data-name="Group 411"
+                                        transform="translate(-1498 -1192)"
+                                >
+                                    <g
+                                            id="Rectangle_282"
+                                            data-name="Rectangle 282"
+                                            transform="translate(1498 1219)"
+                                            fill="#fff"
+                                            stroke="#000"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="32" height="5" rx="2.5" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="31"
+                                                height="4"
+                                                rx="2"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_287"
+                                            data-name="Rectangle 287"
+                                            transform="translate(1498 1210)"
+                                            fill="#fff"
+                                            stroke="#000"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="32" height="5" rx="2.5" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="31"
+                                                height="4"
+                                                rx="2"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_288"
+                                            data-name="Rectangle 288"
+                                            transform="translate(1498 1201)"
+                                            fill="#fff"
+                                            stroke="#000"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="32" height="5" rx="2.5" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="31"
+                                                height="4"
+                                                rx="2"
+                                                fill="none"
+                                        />
+                                    </g>
+                                    <g
+                                            id="Rectangle_289"
+                                            data-name="Rectangle 289"
+                                            transform="translate(1498 1192)"
+                                            fill="#fff"
+                                            stroke="#000"
+                                            stroke-width="1"
+                                    >
+                                        <rect width="32" height="5" rx="2.5" stroke="none" />
+                                        <rect
+                                                x="0.5"
+                                                y="0.5"
+                                                width="31"
+                                                height="4"
+                                                rx="2"
+                                                fill="none"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="main-ap-axis">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row g-2 g-xl-4">
+                        @include('front.investment_shared.list', ['investment' => $investment])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     @push('scripts')
         <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
         <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
         <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
-        <script>
-            function toggleNav() {
-                const sideMenu = document.getElementById("sideMenu");
-                const floor = document.getElementById("pagecontent");
-
-                if(sideMenu.classList.contains('openMenu')){
-                    sideMenu.style.width = "0";
-                    sideMenu.classList.remove("openMenu");
-                    floor.style.left = "0";
-                    document.body.style.overflow = 'scroll';
-                } else {
-                    sideMenu.style.width = "250px";
-                    sideMenu.classList.add("openMenu");
-                    floor.style.left = "250px";
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-        </script>
     @endpush
 @endsection
-

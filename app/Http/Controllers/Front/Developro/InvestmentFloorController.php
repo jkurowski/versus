@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front\Developro;
 
 use App\Http\Controllers\Controller;
+use App\Models\Building;
 use Illuminate\Http\Request;
 
 // CMS
@@ -22,13 +23,12 @@ class InvestmentFloorController extends Controller
         $this->pageId = 2;
     }
 
-    public function index($lang, $investment, $id, Request $request)
+    public function index($lang, $building, $id, $floorSlug, Request $request)
     {
 
         $floor = Floor::find($id);
-        $investment = Investment::find($investment);
-
-        $investments = Investment::with('floors')->get();
+        $building = Building::find($building);
+        $investment = Investment::find($floor->investment_id);
 
         $investment_room = $investment->load(array(
             'floorRooms' => function ($query) use ($floor, $request) {
@@ -61,10 +61,12 @@ class InvestmentFloorController extends Controller
         $page = Page::where('id', $this->pageId)->first();
 
         return view('front.investment_floor.index', [
-            'investments' => $investments,
+            'building' => $building,
             'investment' => $investment_room,
             'floor' => $floor,
             'properties' => $investment_room->floorRooms,
+            'next_floor' => $floor->findNext($investment->id, $building->id, $floor->position),
+            'prev_floor' => $floor->findPrev($investment->id, $building->id, $floor->position),
             'uniqueRooms' => $this->repository->getUniqueRooms($floor->properties()),
             'page' => $page
         ]);
