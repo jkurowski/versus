@@ -171,7 +171,7 @@
                             <picture>
                                 <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
                                 <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
-                                <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}">
+                                <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="lazy" class="img-fluid ap-img-3d">
                             </picture>
                         </a>
                     @endif
@@ -292,6 +292,9 @@
     </script>
     <script src="{{ asset('/js/validation.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/pl.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/glightbox.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/glightbox.min.css') }}" />
+
     <script type="text/javascript">
         const button = document.querySelector('#addToFav');
         button.addEventListener('click', function() {
@@ -316,6 +319,10 @@
                 }
             });
         });
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+        });
 
         $(document).ready(function(){
             $(".validateForm").validationEngine({
@@ -323,6 +330,7 @@
                 updatePromptsPosition:true,
                 promptPosition : "topRight:-137px"
             });
+
         });
         @if (session('success')||session('warning'))
         $(window).load(function() {

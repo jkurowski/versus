@@ -42,6 +42,17 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <div class="col-12">
                                         <div class="toggleRow">
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów', 'name' => 'cords', 'value' => $entry->cords, 'rows' => 10, 'class' => 'mappa-html'])
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów HTML', 'name' => 'html', 'value' => $entry->html, 'rows' => 10, 'class' => 'mappa-area'])
@@ -49,6 +60,17 @@
                                         @include('form-elements.html-select', ['label' => 'Widoczne', 'name' => 'active', 'selected' => $entry->active, 'select' => [
                                             '1' => 'Tak',
                                             '0' => 'Nie'
+                                            ]
+                                        ])
+                                        @include('form-elements.html-select', ['label' => 'Promocja', 'name' => 'specialoffer', 'selected' => $entry->specialoffer, 'select' => [
+                                            '0' => 'Nie',
+                                            '1' => 'Tak'
+                                            ]
+                                        ])
+                                        @include('form-elements.html-select', ['label' => 'Typ powierzchni', 'name' => 'type', 'selected' => $entry->type, 'select' => [
+                                            '1' => 'Mieszkanie / Apartament',
+                                            '2' => 'Komórka lokatorska',
+                                            '3' => 'Miejsce parkingowe'
                                             ]
                                         ])
                                         @include('form-elements.html-select', [
@@ -83,6 +105,28 @@
                                             '6' => '6'
                                             ]
                                         ])
+
+                                        @include('form-elements.html-select', [
+                                            'label' => 'Wystawa okna',
+                                            'name' => 'window',
+                                            'selected' => $entry->window,
+                                            'select' => [
+                                                '0' => 'Brak informacji',
+                                                '1' => 'Północ',
+                                                '2' => 'Południe',
+                                                '3' => 'Wschód',
+                                                '4' => 'Zachód',
+                                                '5' => 'Północny wschód',
+                                                '6' => 'Północny zachód',
+                                                '7' => 'Południowy wschód',
+                                                '8' => 'Południowy zachód',
+                                                '9' => 'Wschód, Północ',
+                                                '10' => 'Wschód, Południe',
+                                                '11' => 'Zachód, Północ',
+                                                '12' => 'Zachód, Południe'
+                                        ]])
+
+                                        @include('form-elements.html-input-text-count', ['label' => 'Oferta specjalna', 'sublabel'=> 'Dodatkowa treść', 'name' => 'specialoffer_text', 'value' => $entry->specialoffer_text, 'maxlength' => 180])
 
                                         @include('form-elements.input-text', ['label' => 'Powierzchnia', 'name' => 'area', 'value' => $entry->area, 'required' => 1])
                                         @include('form-elements.input-text', ['label' => 'Cena', 'sublabel'=> 'Tylko liczby', 'name' => 'price', 'value' => $entry->price])

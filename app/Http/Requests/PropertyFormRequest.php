@@ -37,7 +37,6 @@ class PropertyFormRequest extends FormRequest
             'specialoffer' => 'required|integer',
             'specialoffer_text' => 'nullable|max:250',
             'garage_text' => 'nullable|max:250',
-            'safe_loan' => 'required|integer',
             'rooms' => 'required|integer',
             'area' => '',
             'area_floor' => '',
