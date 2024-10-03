@@ -26,7 +26,7 @@ class InvestmentController extends Controller
 
     public function show(Request $request)
     {
-        $investments = Investment::with('floors')->get();
+        $investment = Investment::with('floors')->find(1);
 
         $query = Property::orderBy('status', 'ASC')->where('type', '!=', 2)->where('type', '!=', 3)->with('investment');
 
@@ -60,7 +60,7 @@ class InvestmentController extends Controller
         $floors = Floor::orderBy('position')->with('propertiesForSale')->get();
 
         return view('front.investment.show', [
-            'investments' => $investments,
+            'investment' => $investment,
             'properties' => $query->get(),
             'floors' => $floors,
             'page' => $page

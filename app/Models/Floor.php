@@ -39,6 +39,11 @@ class Floor extends Model
         return $this->hasMany('App\Models\Property');
     }
 
+    public function building(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo('App\Models\Building', 'building_id');
+    }
+
     /**
      * Get floor properties
      * @return HasMany

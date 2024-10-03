@@ -8,7 +8,7 @@ function onWindowResize() {
 
 $(document).ready(function(){
     $('#invesmentplan').mapster({
-        fillColor: 'ae5e33',
+        fillColor: '9c7944',
         fillOpacity: 0.7,
         clickNavigate: true
     });

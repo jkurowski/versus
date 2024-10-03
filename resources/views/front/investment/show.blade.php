@@ -17,40 +17,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <!-- Plan -->
-                    <picture data-aos="fade" data-aos-offset="-100">
-                        <source
-                                srcset="{{ asset('images/apartamenty/ap-main.webp') }}"
-                                media="(max-width: 992px)"
-                                type="image/webp"
-                        />
-                        <source
-                                srcset="{{ asset('images/apartamenty/ap-main@2x.webp') }}"
-                                media="(min-width: 992px)"
-                                type="image/webp"
-                        />
-                        <source
-                                srcset="{{ asset('images/apartamenty/ap-main.png') }}"
-                                media="(max-width: 992px)"
-                                type="image/png"
-                        />
-                        <source
-                                srcset="{{ asset('images/apartamenty/ap-main@2x.png') }}"
-                                media="(min-width: 992px)"
-                                type="image/png"
-                        />
-                        <img
-                                loading="lazy"
-                                class="ap-main-img img-fluid"
-                                src="{{ asset('images/apartamenty/ap-main@2x.png') }}"
-                                width="2500"
-                                height="1563"
-                                aria-label="Nowoczesne mieszkania"
-                                alt="Nowoczesne mieszkania"
-                        />
-                    </picture>
-
-                    <!-- End of Plan -->
+                    @if($investment->plan)
+                        <div id="plan-holder">
+                            <div class="plan-info">Z planu budynku wybierz piętro. Z <a href="#roomsList" class="scroll-to" data-offset="80">listy poniżej</a> wybierz mieszkanie.</div>
+                            <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan">
+                            <map name="invesmentplan">
+                                @foreach($floors as $floor)
+                                    @if($floor->html)
+                                        <area
+                                                shape="poly"
+                                                href="{{route('front.investment.floor', [$floor->building, $floor, Str::slug($floor->name)])}}"
+                                                title="{{$floor->name}}"
+                                                alt="floor-{{$floor->id}}"
+                                                data-item="{{$floor->id}}"
+                                                data-floornumber="{{$floor->id}}"
+                                                data-floortype="{{$floor->type}}"
+                                                coords="@if($floor->html) {{cords($floor->html)}} @endif">
+                                    @endif
+                                @endforeach
+                            </map>
+                        </div>
+                    @endif
                 </div>
             </div>
             <!-- FORM -->

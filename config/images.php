@@ -25,8 +25,8 @@ return [
     */
 
     'plan' => [
-        'width' => 2250,
-        'height' => 2250
+        'width' => 1080,
+        'height' => 1080
     ],
 
     /*
@@ -47,8 +47,8 @@ return [
     */
 
     'building_plan' => [
-        'width' => 2250,
-        'height' => 2250,
+        'width' => 1080,
+        'height' => 1080,
         'preview_file_path' => 'investment/building/',
     ],
 
