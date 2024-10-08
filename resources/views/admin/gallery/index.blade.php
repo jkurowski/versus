@@ -46,7 +46,7 @@
                                     <div class="btn-group">
                                         <span class="btn action-button move-button me-1"><i class="fe-move"></i></span>
                                         <a href="{{route('admin.gallery.edit', $p->id)}}" class="btn action-button me-1" data-bs-toggle="tooltip" data-placement="top" data-bs-title="Edytuj wpis"><i class="fe-edit"></i></a>
-                                        <form method="POST" action="" class="d-none">
+                                        <form method="POST" action="">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button
@@ -87,6 +87,6 @@
         const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
-        @if (session('success')) toastr.options={closeButton:!0,progressBar:!0,positionClass:"toast-bottom-right",timeOut:"3000"};toastr.success("{{ session('success') }}"); @endif
+        @if (session('success')) toastr.options={closeButton:!0,progressBar:!0,positionClass:"toast-bottom-left",timeOut:"3000"};toastr.success("{{ session('success') }}"); @endif
     </script>
 @endpush

@@ -24,12 +24,12 @@
                         <div class="row">
                             <div class="col-12">
                                 @if(!Request::get('lang'))
-                                    @include('form-elements.html-select', ['label' => 'Strona główna', 'name' => 'status', 'selected' => $entry->status, 'select' => ['0' => 'Nie', '1' => 'Tak']])
+                                    @include('form-elements.html-select', ['label' => 'Pokaż w galerii', 'name' => 'status', 'selected' => $entry->status, 'select' => ['0' => 'Nie', '1' => 'Tak']])
                                 @endif
                                 @include('form-elements.html-input-text', ['label' => 'Nazwa', 'name' => 'name', 'value' => $entry->name, 'required' => 1])
+                                    @include('form-elements.html-input-text', ['label' => 'Opis', 'name' => 'text', 'value' => $entry->text, 'required' => 1])
                                 @if(!Request::get('lang'))
                                     @include('form-elements.html-input-file', ['label' => 'Zdjęcie', 'sublabel' => '(wymiary: '.config('images.gallery.big_width').'px / '.config('images.gallery.big_height').'px)', 'name' => 'file'])
-                                    @include('form-elements.textarea', ['label' => 'Opis', 'name' => 'text', 'value' => $entry->text])
                                 @endif
                             </div>
                         </div>
