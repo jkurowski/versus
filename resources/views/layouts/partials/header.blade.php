@@ -117,7 +117,7 @@
                         <a class="nav-link" href="/pl/mieszkania/"><span>Mieszkania</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pl/garaze/"><span>Garaże</span></a>
+                        <a class="nav-link" href="/pl/mieszkania/budynek/1/p/7,garaz/"><span>Garaże</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/pl/o-inwestycji/"><span>O inwestycji</span></a>

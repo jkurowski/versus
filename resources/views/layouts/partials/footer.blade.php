@@ -25,7 +25,7 @@
                         <a class="footer-link" href="/pl/mieszkania/">Mieszkania</a>
                     </li>
                     <li class="pb-3 link-con">
-                        <a class="footer-link" href="/pl/garaze/">Garaże</a>
+                        <a class="footer-link" href="/pl/mieszkania/budynek/1/p/7,garaz/">Garaże</a>
                     </li>
                     <li class="pb-3 link-con">
                         <a class="footer-link" href="/pl/o-inwestycji/">O inwestycji</a>

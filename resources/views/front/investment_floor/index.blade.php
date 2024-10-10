@@ -67,6 +67,8 @@
                     @endif
                 </div>
             </div>
+
+            @if($floor->id <> 7)
             <!-- FORM -->
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 apartments-form-col">
@@ -93,11 +95,13 @@
                     </form>
                 </div>
             </div>
+            @endif
         </div>
     </section>
 
     <section>
         <div class="container">
+            @if($floor->id <> 7)
             <div class="row apartment-row align-items-center">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="row-grid-btns py-4">
@@ -274,7 +278,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row" id="main-ap-axis">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="row g-2 g-xl-4">
@@ -282,6 +285,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         </div>
     </section>
     @push('scripts')
