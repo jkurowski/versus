@@ -31,6 +31,7 @@
                                             </ul>
                                             <ul class="mappa-points list-unstyled mb-0">
                                                 <li><input checked="checked" type="radio" name="tool" id="move" value="arrow" class="movePoint input_hidden"/><label for="move" class="actionBtn tip movePoint" data-toggle="tooltip" data-placement="top" title="Służy do przesuwania punktów"><i class="fe-move"></i> Przesuń / Zaznacz</label></li>
+
                                                 <li><input type="radio" name="tool" value="delete" id="delete" class="deletePoint input_hidden"/><label for="delete" class="actionBtn tip deletePoint" data-toggle="tooltip" data-placement="top" title="Służy do usuwana punków"><i class="fe-trash-2"></i> Usuń punkt</label></li>
                                             </ul>
                                             <ul class="mappa-list list-unstyled mb-0"></ul>
@@ -54,8 +55,28 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="toggleRow">
+
+                                            @if($entry->name)
+                                            <div class="form-group row">
+                                                <label for="copyRoom" class="col-2 col-form-label control-label required">
+                                                    <div class="text-end">Wybierz mieszkanie</div>
+                                                </label>
+                                                <div class="col-7">
+                                                    <select class="form-select" id="copyRoom" name="copyRoom">
+                                                        @foreach($investment->properties as $p)
+                                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-3">
+                                                    <button class="btn btn-primary" id="copyRoomButton">Kopiuj obrys</button>
+                                                </div>
+                                            </div>
+                                            @endif
+
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów', 'name' => 'cords', 'value' => $entry->cords, 'rows' => 10, 'class' => 'mappa-html'])
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów HTML', 'name' => 'html', 'value' => $entry->html, 'rows' => 10, 'class' => 'mappa-area'])
+                                            <div class="mb-4"></div>
                                         </div>
                                         @include('form-elements.html-select', ['label' => 'Widoczne', 'name' => 'active', 'selected' => $entry->active, 'select' => [
                                             '1' => 'Tak',
@@ -129,6 +150,8 @@
                                         @include('form-elements.html-input-text-count', ['label' => 'Oferta specjalna', 'sublabel'=> 'Dodatkowa treść', 'name' => 'specialoffer_text', 'value' => $entry->specialoffer_text, 'maxlength' => 180])
 
                                         @include('form-elements.input-text', ['label' => 'Powierzchnia', 'name' => 'area', 'value' => $entry->area, 'required' => 1])
+                                        @include('form-elements.input-text', ['label' => 'Powierzchnia przy podłodze', 'name' => 'area_floor', 'value' => $entry->area_floor])
+
                                         @include('form-elements.input-text', ['label' => 'Cena', 'sublabel'=> 'Tylko liczby', 'name' => 'price', 'value' => $entry->price])
 
                                         @include('form-elements.input-text', ['label' => 'Ogródek', 'sublabel'=> 'Pow. w m<sup>2</sup>, tylko liczby', 'name' => 'garden_area', 'value' => $entry->garden_area])
@@ -175,9 +198,39 @@
         "areas":[{!! $entry->cords !!}]
     };
     $(document).ready(function() {
-        const mapview = new MapView({el: '.mappa'}, map);
+        let mapview = new MapView({el: '.mappa'}, map);
         @if($floor->file)
         mapview.loadImage('/investment/floor/{{$floor->file}}');
+        @endif
+
+        @if($entry->name)
+        document.getElementById('copyRoomButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const selectedRoomId = document.getElementById('copyRoom').value;
+
+            fetch('{{ route("admin.developro.investment.copy-plan.index", [$investment]) }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}' // Include CSRF token
+                },
+                body: JSON.stringify({
+                    room_id: selectedRoomId,
+                    current_id: {{ $entry->id }}
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+
+                    } else {
+                        console.error('Failed to copy room:', data.message);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
         @endif
     });
 </script>

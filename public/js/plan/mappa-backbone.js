@@ -275,7 +275,7 @@ MapView = Backbone.View.extend({
         "change input": "changeTool",
         "click .selected-true input": "deleteArea",
         "change .mappa-list select": "updateAttribute",
-        "paste textarea": "pasteImageTag"
+        //"paste textarea": "pasteImageTag"
     },
     pasteImageTag: function(b) {
         this.parseImageTag(b.target.value)
@@ -297,6 +297,15 @@ MapView = Backbone.View.extend({
         var d = parseInt(c.target.parentNode.getAttribute("data-index"), 10);
         this.model.get("areas").at(d).destroy();
         this.render()
+    },
+    deleteAllAreas: function() {
+        // Get all areas from the model
+        var areas = this.model.get("areas");
+
+        // Iterate over each area and destroy it
+        areas.each(function(area) {
+            area.destroy();  // This will delete the area
+        });
     },
     dragOver: function(b) {
         b.preventDefault();
@@ -365,6 +374,13 @@ MapView = Backbone.View.extend({
         this.image = new Image();
         this.image.onload = this.onLoadImage;
         this.image.src = b
+    },
+    updateMapData(cords, html) {
+         // Parse the cords if needed
+        this.model.set('areas', cords); // Update model data
+        this.$("textarea.mappa-html").val(html);
+        this.$("textarea.mappa-area").val(cords);
+        this.render(); // Re-render the map view
     },
     createAreaViews: function() {
         if (!this.area_views) {
