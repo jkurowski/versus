@@ -54,17 +54,15 @@
                                         @endif
                                     </div>
                                     <div class="col-12">
-                                        <div class="toggleRow">
-
-                                            @if($entry->name)
+                                        @if($entry->name)
                                             <div class="form-group row">
-                                                <label for="copyRoom" class="col-2 col-form-label control-label required">
+                                                <label for="copyRoom" class="col-3 col-form-label control-label required">
                                                     <div class="text-end">Wybierz mieszkanie</div>
                                                 </label>
-                                                <div class="col-7">
+                                                <div class="col-6">
                                                     <select class="form-select" id="copyRoom" name="copyRoom">
                                                         @foreach($investment->properties as $p)
-                                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
+                                                            <option value="{{ $p->id }}">{{ $p->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -72,8 +70,9 @@
                                                     <button class="btn btn-primary" id="copyRoomButton">Kopiuj obrys</button>
                                                 </div>
                                             </div>
-                                            @endif
+                                        @endif
 
+                                        <div class="toggleRow">
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów', 'name' => 'cords', 'value' => $entry->cords, 'rows' => 10, 'class' => 'mappa-html'])
                                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów HTML', 'name' => 'html', 'value' => $entry->html, 'rows' => 10, 'class' => 'mappa-area'])
                                             <div class="mb-4"></div>
