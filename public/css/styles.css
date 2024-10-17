@@ -14282,6 +14282,11 @@ p {
     padding-top: 3rem;
   }
 }
+#navbarNav .dropdown ul,
+#navbarNav .dropdown .show {
+  width: auto !important;
+  border-radius: 0;
+}
 .navbar-toggler[aria-expanded=false] .navbar-toggler-icon-x {
   display: none;
 }

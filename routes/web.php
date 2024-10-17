@@ -34,6 +34,8 @@ Route::middleware(['restrictIp'])->group(function () {
             Route::get('/wykonczenie', 'Static\IndexController@wykonczenie')->defaults('locale', 'pl')->name('static.wykonczenie');
             Route::get('/polityka-prywatnosci', 'Static\IndexController@polityka')->defaults('locale', 'pl')->name('static.polityka');
 
+            //Route::get('/garaze', 'Static\IndexController@garaze')->defaults('locale', 'pl')->name('static.garaze');
+
             // Developro
             Route::group(['prefix'=>'/mieszkania', 'as' => 'front.investment.'], function() {
                 // Inwestycja budynkowa

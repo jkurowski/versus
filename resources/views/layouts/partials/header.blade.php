@@ -116,8 +116,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/pl/mieszkania/"><span>Mieszkania</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pl/mieszkania/budynek/1/p/7,garaz/"><span>Garaże</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span>Garaże</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/1/p/7,garaz/">Budynek B1</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/2/p/8,garaz/">Budynek B2</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/pl/o-inwestycji/"><span>O inwestycji</span></a>
@@ -128,6 +132,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/pl/galeria/"><span>Galeria</span></a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/pl/wykonczenie/"><span>Wykończenie</span></a>
                     </li>

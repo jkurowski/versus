@@ -19,4 +19,10 @@ class IndexController extends Controller
         $page = Page::find(5);
         return view('front.static.polityka', compact('page'));
     }
+
+    public function garaze()
+    {
+        $page = Page::find(5);
+        return view('front.static.garaze', compact('page'));
+    }
 }
