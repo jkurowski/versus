@@ -65,6 +65,7 @@
 <script src="{{ asset('/js/bootstrap.bundle.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/aos.min.js') }}" charset="utf-8"></script>
+<script src="{{ asset('/js/leaflet.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/app.min.js') }}" charset="utf-8"></script>
 
 @if(settings()->get("popup_status") == 1)

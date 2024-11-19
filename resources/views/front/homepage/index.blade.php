@@ -194,7 +194,7 @@
                                 </p>
                             </div>
                             <a
-                                    href="/pl/mieszkania/"
+                                    href="/pl/lokalizacja/"
                                     class="btn btn-primary"
                                     data-aos="fade-up"
                                     data-aos-delay="200"
@@ -708,7 +708,7 @@
                                 </div>
 
                                 <a
-                                        href="/pl/mieszkania/"
+                                        href="/pl/o-inwestycji/"
                                         class="btn btn-primary"
                                         data-aos="fade-up"
                                         data-aos-delay="200"
