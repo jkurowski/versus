@@ -1078,8 +1078,8 @@
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">2-pokojowe</div>
                                 </div>
-                                <a href="/pl/mieszkania/?rooms=2" class="btn btn-primary"><span>Sprawdź</span></a>
-                                <a href="/pl/mieszkania/?rooms=2" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?rooms=2#room-list" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?rooms=2#room-list" class="ap-box-link"></a>
                             </div>
                         </div>
                         <!-- 2 -->
@@ -1089,8 +1089,8 @@
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">3-pokojowe</div>
                                 </div>
-                                <a href="/pl/mieszkania/?rooms=3" class="btn btn-primary"><span>Sprawdź</span></a>
-                                <a href="/pl/mieszkania/?rooms=3" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?rooms=3#room-list" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?rooms=3#room-list" class="ap-box-link"></a>
                             </div>
                         </div>
                         <!-- 3 -->
@@ -1100,8 +1100,8 @@
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">z ogródkiem</div>
                                 </div>
-                                <a href="/pl/mieszkania/?rooms=2" class="btn btn-primary"><span>Sprawdź</span></a>
-                                <a href="/pl/mieszkania/?rooms=2" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?garden=1#room-list" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?garden=1#room-list" class="ap-box-link"></a>
                             </div>
                         </div>
                     </div>

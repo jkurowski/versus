@@ -266,7 +266,7 @@
 
             <div class="row" id="main-ap-axis">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="row g-2 g-xl-4">
+                    <div id="room-list" class="row g-2 g-xl-4">
                         @include('front.investment_shared.list')
                     </div>
                 </div>
