@@ -37,6 +37,9 @@ class InvestmentController extends Controller
             $query->where('status', $request->input('status'));
         }
 
+        if ($request->input('garden')) {
+            $query->whereNotNull('garden_area')->where('garden_area', '!=', '');
+        }
 
         if ($request->has('floor')) {
             $floorNumber = $request->input('floor');

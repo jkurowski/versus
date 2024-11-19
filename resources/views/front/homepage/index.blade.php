@@ -1072,51 +1072,36 @@
                     <!-- AP BOXES -->
                     <div class="row gx-sm-30px gy-30px gy-lg-0">
                         <!-- 1 -->
-                        <div
-                                class="col-sm-6 col-lg-4 d-flex justify-content-center"
-                                data-aos="fade-right"
-                        >
+                        <div class="col-sm-6 col-lg-4 d-flex justify-content-center" data-aos="fade-right">
                             <div class="ap-box ap-box-m2" data-aos="fade-right">
                                 <div class="ap-box-info">
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">2-pokojowe</div>
                                 </div>
-                                <a href="/pl/mieszkanie/" class="btn btn-primary">
-                                    <span>Sprawdź</span>
-                                </a>
-                                <a href="/pl/mieszkanie/" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?rooms=2" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?rooms=2" class="ap-box-link"></a>
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div
-                                class="col-sm-6 col-lg-4 d-flex justify-content-center"
-                                data-aos="fade"
-                        >
+                        <div class="col-sm-6 col-lg-4 d-flex justify-content-center" data-aos="fade">
                             <div class="ap-box ap-box-m3" data-aos="fade">
                                 <div class="ap-box-info">
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">3-pokojowe</div>
                                 </div>
-                                <a href="/pl/mieszkanie/" class="btn btn-primary">
-                                    <span>Sprawdź</span>
-                                </a>
-                                <a href="/pl/mieszkanie/" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?rooms=3" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?rooms=3" class="ap-box-link"></a>
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div
-                                class="offset-sm-3 offset-lg-0 col-sm-6 col-lg-4 d-flex justify-content-center"
-                                data-aos="fade-left"
-                        >
+                        <div class="offset-sm-3 offset-lg-0 col-sm-6 col-lg-4 d-flex justify-content-center" data-aos="fade-left">
                             <div class="ap-box ap-box-garden" data-aos="fade-left">
                                 <div class="ap-box-info">
                                     <div class="ap-box-tag">mieszkania</div>
                                     <div class="ap-box-title">z ogródkiem</div>
                                 </div>
-                                <a href="/pl/mieszkanie/" class="btn btn-primary">
-                                    <span>Sprawdź</span>
-                                </a>
-                                <a href="/pl/mieszkanie/" class="ap-box-link"></a>
+                                <a href="/pl/mieszkania/?rooms=2" class="btn btn-primary"><span>Sprawdź</span></a>
+                                <a href="/pl/mieszkania/?rooms=2" class="ap-box-link"></a>
                             </div>
                         </div>
                     </div>
