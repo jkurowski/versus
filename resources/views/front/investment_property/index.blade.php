@@ -154,7 +154,7 @@
     <section class="margin-xs">
         <div class="container">
             <div class="row gy-3 gy-lg-0">
-                <div class="order-1 col-lg-5 offset-lg-1 align-content-center" data-aos="fade">
+                <div class="order-1 col-lg-7 align-content-center" data-aos="fade">
                     @if($property->file)
                         <a href="{{ asset('/investment/property/'.$property->file) }}" class="glightbox" data-gallery="gallery-visual">
                             <picture>
