@@ -46,8 +46,8 @@
     <!-- ---------- -->
     <section class="pt-3 pt-lg-5">
         <div class="container">
-            <div class="row column-gap-2 gy-3 gy-lg-0">
-                <div class="col-lg-5 offset-lg-1">
+            <div class="row gy-3 gy-lg-0">
+                <div class="col-lg-5">
                     <div class="apartment-box">
                         <div class="apartment-tag bg-success mb-4" data-aos="fade-up">
                             {{ roomStatus($property->status )}}
@@ -129,18 +129,7 @@
                                 @if($property->view_3d)
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#modalEstate" class="btn btn-primary w-100"><span>WIRTUALNY SPACER</span></a>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="modalEstate" tabindex="-1" aria-labelledby="modalEstateLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-fluid">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
-                                                    <iframe src="{!! estate2link($property->view_3d) !!}" frameborder="0"></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 @endif
-
 
                                 <!--  -->
                                 <!-- ADD class btn-like-active on liked item -->
@@ -151,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 align-content-center">
+                <div class="col-lg-7 align-content-center">
                     @if($property->view_360)
                         <div class="ratio ratio-16x9">
                             <iframe src="{{ $property->view_360 }}"></iframe>
@@ -164,7 +153,7 @@
 
     <section class="margin-xs">
         <div class="container">
-            <div class="row column-gap-2 gy-3 gy-lg-0">
+            <div class="row gy-3 gy-lg-0">
                 <div class="order-1 col-lg-5 offset-lg-1 align-content-center" data-aos="fade">
                     @if($property->file)
                         <a href="{{ asset('/investment/property/'.$property->file) }}" class="glightbox" data-gallery="gallery-visual">
@@ -273,6 +262,23 @@
             </div>
         </div>
     </section>
+    @if($property->view_3d)
+    <div class="modal fade" id="modalEstate" tabindex="-1" aria-labelledby="modalEstateLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{$property->name}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="{!! estate2link($property->view_3d) !!}" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
 @endsection
 @push('scripts')
     <div id="root3dEstate"></div>
