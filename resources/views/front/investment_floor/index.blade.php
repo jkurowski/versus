@@ -61,8 +61,18 @@
                                                 coords="{{cords($r->html)}}"
                                                 class="inline status-{{$r->status}}"
                                                 href="@if($r->status <> 3 && $floor->type == 1) {{route('front.investment.property', ['investment_id' => $investment->id, 'floor' => $floor->id, 'property' => $r->id])}} @else # @endif"
-                                                title="<h4 class='mb-2'>{{$r->name}}</h4><ul class='mb-0 list-unstyled mt-0'>
+                                                title="<h4 class='mb-2'>{{$r->name}}</h4>
+                                                <ul class='mb-0 list-unstyled mt-0'>
                                                 <li>Powierzchnia: <b class=fr>{{$r->area}} m<sup>2</sup></b></li>
+
+                                                @if($r->price_promotion)
+                                                <li>Cena: <b class=fr>@money($r->price_promotion)</b></li>
+                                                @else
+                                                    @if($r->price)
+                                                    <li>Cena: <b class=fr>@money($r->price)</b></li>
+                                                    @endif
+                                                @endif
+
                                                 @if($floor->type == 1)<li>Pokoje: <b class=fr>{{$r->rooms}}</b></li>@endif
                                                 <li><b>{{ roomStatus($r->status) }}</b></li></ul>">
                                     @endif
