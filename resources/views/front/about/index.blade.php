@@ -1023,10 +1023,10 @@
                                 <div class="ap-box-tag">mieszkania</div>
                                 <div class="ap-box-title">2-pokojowe</div>
                             </div>
-                            <a href=/pl/mieszkanie/" class="btn btn-primary">
+                            <a href="/pl/mieszkania/?rooms=2#room-list" class="btn btn-primary">
                                 <span>Sprawdź</span>
                             </a>
-                            <a href="/pl/mieszkanie/" class="ap-box-link"></a>
+                            <a href="/pl/mieszkania/?rooms=2#room-list" class="ap-box-link"></a>
                         </div>
                         <div class="ap-box-additional">
                             <div class="d-flex flex-column mb-4">
@@ -1059,7 +1059,7 @@
                                 mieszkania dwupokojowe o powierzchniach 32-40 m2.
                             </p>
                             <a
-                                    href="/pl/mieszkania/"
+                                    href="/pl/mieszkania/?rooms=2#room-list"
                                     class="btn btn-primary btn-big"
                                     data-aos="fade-up"
                                     data-aos-delay="200"
@@ -1077,10 +1077,10 @@
                                 <div class="ap-box-tag">mieszkania</div>
                                 <div class="ap-box-title">3-pokojowe</div>
                             </div>
-                            <a href="/pl/mieszkanie/" class="btn btn-primary">
+                            <a href="/pl/mieszkania/?rooms=3#room-list" class="btn btn-primary">
                                 <span>Sprawdź</span>
                             </a>
-                            <a href="/pl/mieszkanie/" class="ap-box-link"></a>
+                            <a href="/pl/mieszkania/?rooms=3#room-list" class="ap-box-link"></a>
                         </div>
                         <div class="ap-box-additional">
                             <div class="d-flex flex-column mb-4">
@@ -1111,7 +1111,7 @@
                                 lokale w ofercie mają powierzchnię 56 m2.
                             </p>
                             <a
-                                    href="/pl/mieszkania/"
+                                    href="/pl/mieszkania/?rooms=3#room-list"
                                     class="btn btn-primary btn-big"
                                     data-aos="fade-up"
                                     data-aos-delay="200"

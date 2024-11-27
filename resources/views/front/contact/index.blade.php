@@ -97,41 +97,21 @@
                     <div class="person-box">
                         <div class="person-image" data-aos="fade-right">
                             <picture>
-                                <source
-                                        srcset="{{ asset('images/team/Gabriela.webp') }}"
-                                        media="(max-width: 992px)"
-                                        type="image/webp"
-                                />
-                                <source
-                                        srcset="{{ asset('images/team/Gabriela@2x.webp') }}"
-                                        media="(min-width: 992px)"
-                                        type="image/webp"
-                                />
-                                <source
-                                        srcset="{{ asset('images/team/Gabriela.jpg') }}"
-                                        media="(max-width: 992px)"
-                                        type="image/jpg"
-                                />
-                                <source
-                                        srcset="{{ asset('images/team/Gabriela@2x.jpg') }}"
-                                        media="(min-width: 992px)"
-                                        type="image/jpg"
-                                />
                                 <img
                                         loading="lazy"
                                         class="img-fluid person-img person-img-gabriela"
-                                        src="{{ asset('images/team/Gabriela@2x.jpg') }}"
+                                        src="{{ asset('images/team/weronika.jpg') }}"
                                         width="1000"
                                         height="667"
-                                        aria-label="Osiedle Versus - zespół - Gabriela"
-                                        alt="Osiedle Versus - zespół - Gabriela"
+                                        aria-label="Osiedle Versus - Zespół - Weronika"
+                                        alt="Osiedle Versus - Zespół - Weronika"
                                 />
                             </picture>
                         </div>
                         <div class="person-info">
-                            <div class="person-name">Gabriela</div>
-                            <a href="tel:+48570570232" class="person-phone"
-                            >+48 570 570 232</a
+                            <div class="person-name">Weronika</div>
+                            <a href="tel:+48570370403" class="person-phone"
+                            >+48 570 370 403</a
                             >
                         </div>
                     </div>
@@ -395,10 +375,7 @@
                                                     />
                                                 </svg>
                                             </div>
-                                            <span
-                                            >ul. Kamieniarska 37,<br />
-                            30-364 Kraków</span
-                                            >
+                                            <span>ul. Federowicza 15,<br />30-392 Kraków</span>
                                         </div>
                                         <!-- TIME -->
                                         <div class="contact-info-box-data">
