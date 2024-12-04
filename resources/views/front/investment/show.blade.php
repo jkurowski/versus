@@ -27,7 +27,7 @@
                                         <area
                                                 shape="poly"
                                                 href="{{route('front.investment.floor', [$floor->building, $floor, Str::slug($floor->name)])}}"
-                                                title="{{$floor->name}}"
+                                                title="<div class='text-center'><h4 class='mb-0'>{{$floor->name}}</h4></div>"
                                                 alt="floor-{{$floor->id}}"
                                                 data-item="{{$floor->id}}"
                                                 data-floornumber="{{$floor->id}}"
