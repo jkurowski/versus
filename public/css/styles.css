@@ -13522,6 +13522,13 @@ p {
 .apartments {
   position: relative;
 }
+.btn:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  box-shadow: 0 0 0 0 rgba(49, 132, 253, 0.5);
+  border: 0;
+  outline: 0;
+}
 .apartments-form {
   background-color: #ffe2b6;
   padding: 3.0125rem 2rem;
