@@ -36,43 +36,26 @@
                     <!-- FORM -->
                     <div class="row">
                         <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                            <form class="apartments-form" data-aos="fade">
-                                <select
-                                        name=""
-                                        id=""
-                                        class="form-select apartments-form-select"
-                                        aria-label="Powierzchnia"
-                                >
-                                    <option selected="">Powierzchnia</option>
-                                    <option value="1">Od 25 do 35 m<sup>2</sup></option>
-                                    <option value="2">Od 35 do 45 m<sup>2</sup></option>
-                                    <option value="3">Od 50 do 60 m<sup>2</sup></option>
+                            <form class="apartments-form" data-aos="fade" method="get" action="/pl/mieszkania/#roomlist">
+                                <select name="area" id="" class="form-select apartments-form-select" aria-label="Powierzchnia">
+                                    <option>Powierzchnia</option>
+                                    <option value="25-35">Od 25 do 35 m<sup>2</sup></option>
+                                    <option value="36-45">Od 36 do 45 m<sup>2</sup></option>
+                                    <option value="46-55">Od 46 do 55 m<sup>2</sup></option>
+                                    <option value="56-65">Od 56 do 65 m<sup>2</sup></option>
                                 </select>
-                                <select
-                                        name=""
-                                        id=""
-                                        class="form-select apartments-form-select"
-                                        aria-label="Pokoje"
-                                >
-                                    <option selected="">Liczba pokoi</option>
-                                    <option value="2">2-pokojwe</option>
-                                    <option value="3">3-pokojwe</option>
+                                <select name="room" id="" class="form-select apartments-form-select" aria-label="Pokoje">
+                                    <option>Liczba pokoi</option>
+                                    <option value="2">2-pokojowe</option>
+                                    <option value="3">3-pokojowe</option>
                                 </select>
-                                <select
-                                        name=""
-                                        id=""
-                                        class="form-select apartments-form-select"
-                                        aria-label="Piętro"
-                                >
-                                    <option selected="">Piętro</option>
+                                <select name="floor" id="" class="form-select apartments-form-select" aria-label="Piętro">
+                                    <option>Piętro</option>
+                                    <option value="0">Parter</option>
                                     <option value="1">1 piętro</option>
                                     <option value="2">2 piętro</option>
-                                    <option value="3">3 piętro</option>
                                 </select>
-                                <button
-                                        class="btn btn-primary d-flex align-items-center gap-2"
-                                        type="button"
-                                >
+                                <button class="btn btn-primary d-flex align-items-center gap-2" type="submit">
                                     <span> Szukaj </span>
                                 </button>
                             </form>

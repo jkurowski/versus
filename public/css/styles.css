@@ -13512,11 +13512,11 @@ p {
   }
 }
 .ap-box-garden {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-set(url("../images/apartamenty/ap-3.jpg") type("image/webp"), url("../images/apartamenty/ap-3.png") type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-set(url("../images/mieszk_ogr3.jpg") type("image/jpg"));
 }
 @media (min-width: 992px) {
   .ap-box-garden {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-set(url("../images/apartamenty/ap-3@2x.webp") type("image/webp"), url("../images/apartamenty/ap-3@2x.png") type("image/png"));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-set(url("../images/mieszk_ogr3.jpg") type("image/jpg"));
   }
 }
 .apartments {
@@ -15196,5 +15196,35 @@ p {
 }
 .qtip.status-4 .qtip-content canvas {
   background: #de8300;
+}
+img#invesmentplan {
+  max-width: 100%;
+  height: auto;
+}
+#floorList {
+  margin-bottom: 10px;
+}
+#floorList a {
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 1px;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#floorList a:hover {
+  background: black;
+}
+#floorList a:last-child {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+@media (max-width: 767.98px) {
+  .apartments-form-move-top {
+    transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
