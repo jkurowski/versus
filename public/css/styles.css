@@ -13524,8 +13524,6 @@ p {
 }
 .btn:focus,
 .form-select:focus {
-  color: #fff;
-  background-color: #0b5ed7;
   box-shadow: 0 0 0 0 rgba(49, 132, 253, 0.5);
   border: 0;
   outline: 0;
