@@ -52,9 +52,12 @@
                     </a>
                 </div>
                 <div class="info-container__likes info-container__box">
-                    <a href="#">
+                    <a href="{{ route('clipboard.index') }}">
                         <span>Ulubione</span>
-                        <div class="like">2</div>
+                        @php
+                            $count = count(session('clipboard.items', []));
+                        @endphp
+                        <div class="like">{{ $count }}</div>
                     </a>
                 </div>
             </div>
@@ -186,9 +189,12 @@
                             </a>
                         </div>
                         <div class="info-container__likes info-container__box">
-                            <a href="#">
+                            <a href="{{ route('clipboard.index') }}">
                                 <span>Ulubione</span>
-                                <div class="like">2</div>
+                                @php
+                                    $count = count(session('clipboard.items', []));
+                                @endphp
+                                <div class="like">{{ $count }}</div>
                             </a>
                         </div>
                     </li>

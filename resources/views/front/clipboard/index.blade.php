@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-    <section id="clipboard">
+    <section id="clipboard" class="pt-3 pt-lg-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -21,18 +21,32 @@
                 </div>
             </div>
         </div>
-        @include('front.investment_shared.list')
+
+        <div class="container" id="main-ap-axis">
+            <div class="row">
+                @include('front.investment_shared.list')
+            </div>
+        </div>
+
         @if($properties->count() > 0)
         <div class="container property mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div id="contact">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div id="contact" class="bg-contact-form p-4 p-lg-5">
                         <div class="form-container">
                             <form class="row validateForm" id="contact-form" action="{{ route('clipboard.send') }}" method="post">
-                                <div class="col-12 text-center">
-                                    <h3>Zapytaj o te mieszkania</h3>
+                                <div class="px-lg-3">
+                                    <img
+                                            src="{{ asset('images/logo-sm-black.svg') }}"
+                                            alt="Logo Osiedle Versus"
+                                            width="42"
+                                            height="28"
+                                            class="mb-1"
+                                    />
+                                    <!-- FORM TITLE -->
+                                    <div class="title-tag-sm">Zapytaj o</div>
+                                    <div class="header-3 mb-3">@if($properties->count() > 1)mieszkania @else mieszkanie @endif</div>
                                 </div>
-
                                 {{ csrf_field() }}
                                 <div class="col-12">
                                     @if (session('success'))
@@ -47,7 +61,7 @@
                                     @endif
                                 </div>
 
-                                <div class="col-4">
+                                <div class="col-12 col-sm-4">
                                     <label for="form_name">Imię i nazwisko <span class="text-danger">*</span></label>
                                     <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
 
@@ -56,7 +70,7 @@
                                     @enderror
 
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                     <label for="form_email">Adres e-mail <span class="text-danger">*</span></label>
                                     <input name="form_email" id="form_email" class="validate[required,custom[email]] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
 
@@ -64,7 +78,7 @@
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                     @enderror
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                     <label for="form_phone">Numer telefonu <span class="text-danger">*</span></label>
                                     <input name="form_phone" id="form_phone" class="validate[required,custom[phone]] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
 
@@ -81,10 +95,17 @@
                                     @enderror
                                 </div>
                                 @foreach ($rules as $r)
-                                    <div class="col-12 mt-4">
-                                        <div class="rodo-rule clearfix">
-                                            <input name="rule_{{$r->id}}" id="zgoda_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
-                                            <label for="zgoda_{{$r->id}}">{!! $r->text !!}</label>
+                                    <div class="col-12">
+                                        <div class="form-check text-start pt-5 d-flex gap-3 align-items-center">
+                                            <input
+                                                    class="form-check-input @if($r->required === 1) validate[required] @endif"
+                                                    type="checkbox"
+                                                    value="1"
+                                                    id="zgoda_{{$r->id}}"
+                                                    name="rule_{{$r->id}}"
+                                                    data-prompt-position="topLeft:0"
+                                            />
+                                            <label class="form-check-label small fw-medium" for="zgoda_{{$r->id}}">{!! $r->text !!}</label>
                                         </div>
                                     </div>
                                 @endforeach
@@ -92,9 +113,9 @@
                                 <div class="col-12">
                                     <input type="hidden" name="form_page" value="Schowek">
                                     <script type="text/javascript">
-                                        document.write("<button class=\"bttn\" type=\"submit\">WYŚLIJ WIADOMOŚĆ</button>");
+                                        document.write("<button class=\"btn btn-primary mt-4 btn-submit\" type=\"submit\">WYŚLIJ WIADOMOŚĆ</button>");
                                     </script>
-                                    <noscript><p><b>Do poprawnego działania, Java musi być włączona.</b><p></noscript>
+                                    <noscript>Do poprawnego działania, Java musi być włączona.</noscript>
                                 </div>
                             </form>
                         </div>

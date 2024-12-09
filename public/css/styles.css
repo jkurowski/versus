@@ -15164,6 +15164,16 @@ p {
   font-weight: 600;
   float: right;
 }
+#clipboard .form-control,
+#clipboard textarea.form-control {
+  letter-spacing: 0;
+  background: 0 0;
+  border-radius: 0;
+  border-bottom: 1px solid #000;
+}
+.form-check p {
+  margin-bottom: 0;
+}
 /* Kolory dymkow
 '1' => 'Na sprzedaż',
 '2' => 'Rezerwacja',
