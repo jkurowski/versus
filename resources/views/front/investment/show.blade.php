@@ -54,19 +54,19 @@
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 apartments-form-col">
                     <form class="apartments-form apartments-form-move-top" method="get" action="#roomlist">
                         <select name="area" id="" class="form-select apartments-form-select" aria-label="Powierzchnia">
-                            <option>Powierzchnia</option>
+                            <option value="">Powierzchnia</option>
                             <option value="25-35" @if(request()->input('area') == "25-35") selected @endif>Od 25 do 35 m<sup>2</sup></option>
                             <option value="36-45" @if(request()->input('area') == "36-45") selected @endif>Od 36 do 45 m<sup>2</sup></option>
                             <option value="46-55" @if(request()->input('area') == "46-55") selected @endif>Od 46 do 55 m<sup>2</sup></option>
                             <option value="46-55" @if(request()->input('area') == "46-55") selected @endif>Od 56 do 65 m<sup>2</sup></option>
                         </select>
                         <select name="room" id="" class="form-select apartments-form-select" aria-label="Pokoje">
-                            <option>Liczba pokoi</option>
+                            <option value="">Liczba pokoi</option>
                             <option value="2" @if(request()->input('room') == "2") selected @endif>2-pokojowe</option>
                             <option value="3" @if(request()->input('room') == "3") selected @endif>3-pokojowe</option>
                         </select>
                         <select name="floor" id="" class="form-select apartments-form-select" aria-label="Piętro">
-                            <option>Piętro</option>
+                            <option value="">Piętro</option>
                             <option value="0" @if(request()->input('floor') == "0") selected @endif>Parter</option>
                             <option value="1" @if(request()->input('floor') == "1") selected @endif>1 piętro</option>
                             <option value="2" @if(request()->input('floor') == "2") selected @endif>2 piętro</option>
