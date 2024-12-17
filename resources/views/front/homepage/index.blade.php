@@ -44,7 +44,7 @@
                                     <option value="46-55">Od 46 do 55 m<sup>2</sup></option>
                                     <option value="56-65">Od 56 do 65 m<sup>2</sup></option>
                                 </select>
-                                <select name="room" id="" class="form-select apartments-form-select" aria-label="Pokoje">
+                                <select name="rooms" id="" class="form-select apartments-form-select" aria-label="Pokoje">
                                     <option value="">Liczba pokoi</option>
                                     <option value="2">2-pokojowe</option>
                                     <option value="3">3-pokojowe</option>
