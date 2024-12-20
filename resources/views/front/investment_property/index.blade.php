@@ -181,7 +181,11 @@
                             <div class="header-3 mb-3">tym mieszkaniem?</div>
                         </div>
                         <!-- FORM -->
-                        <form id="contact-form" autocomplete="off" class="p-0 p-lg-3 validateForm" action="{{route('contact.property', $property->id)}}">
+                        <form id="contact-form"
+                              autocomplete="off" class="p-0 p-lg-3 validateForm"
+                              action="{{route('contact.property', $property->id)}}"
+                              method="post"
+                        >
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-12">

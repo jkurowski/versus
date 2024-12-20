@@ -1114,106 +1114,84 @@
                                 <div class="header-3 mb-3">kontaktowy</div>
                             </div>
                             <!-- FORM -->
-                            <form id="contact-form" autocomplete="off" class="p-0 p-lg-3">
+                            <form id="contact-form"
+                                  autocomplete="off" class="p-0 p-lg-3 validateForm"
+                                  action="{{route('contact.form')}}"
+                                  method="post"
+                            >
+                                {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                                id="form-errors"
-                                                class="alert-danger alert hide-empty"
-                                        ></div>
-                                        <div
-                                                id="form-success"
-                                                class="alert-success alert hide-empty"
-                                        ></div>
+                                        @if (session('success'))
+                                            <div id="form-success" class="alert-success alert hide-empty">
+                                                {{ session('success') }}
+                                            </div>
+                                        @endif
+                                        @if (session('error'))
+                                            <div id="form-errors" class="alert-danger alert hide-empty">
+                                                {{ session('error') }}
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating mb-3">
-                                            <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="user-name"
-                                                    placeholder="Imię i nazwisko"
-                                                    name="username"
-                                                    required=""
-                                            />
-                                            <label for="user-name">Imię i nazwisko*</label>
+                                            <input type="text" class="validate[required] form-control @error('form_name') is-invalid @enderror" id="form_name" placeholder="Imię i nazwisko" name="form_name" required="" value="{{ old('form_name') }}" />
+
+                                            @error('form_name')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+
+                                            <label for="form_name">Imię i nazwisko*</label>
                                         </div>
                                     </div>
 
                                     <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                                         <div class="form-floating mb-3">
-                                            <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    id="user-email"
-                                                    placeholder="Adres e-mail"
-                                                    name="email"
-                                                    required=""
-                                            />
-                                            <label for="user-email">Adres e-mail*</label>
+                                            <input type="email" class="validate[required,custom[email]] form-control @error('form_email') is-invalid @enderror" id="form_email" placeholder="Adres e-mail" name="form_email" required="" value="{{ old('form_email') }}" />
+
+                                            @error('form_email')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+
+                                            <label for="form_email">Adres e-mail*</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                                         <div class="form-floating mb-3">
-                                            <input
-                                                    type="tel"
-                                                    class="form-control"
-                                                    id="user-tel"
-                                                    placeholder="Telefon"
-                                                    name="tel"
-                                            />
-                                            <label for="user-tel">Numer telefon</label>
+                                            <input type="tel" class="validate[required,custom[phone]] form-control @error('form_phone') is-invalid @enderror" id="form_phone" placeholder="Telefon" name="form_phone" value="{{ old('form_phone') }}" />
+                                            @error('form_phone')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                            <label for="form_phone">Numer telefon</label>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-floating">
-                        <textarea
-                                class="form-control"
-                                placeholder="Wiadomość"
-                                id="user-message"
-                                style="height: 150px"
-                                name="message"
-                        ></textarea>
-                                            <label for="user-message">Wiadomość</label>
+                                            <textarea class="validate[required] form-control @error('form_message') is-invalid @enderror" placeholder="Wiadomość" id="form_message" style="height: 150px" name="form_message">{{ old('form_message') }}</textarea>
+
+                                            @error('form_message')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                            <label for="form_message">Wiadomość</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-check text-start pt-5 d-flex gap-3">
-                                        <input
-                                                class="form-check-input"
-                                                type="checkbox"
-                                                value=""
-                                                id="terms-check"
-                                                name="terms"
-                                        />
-                                        <label
-                                                class="form-check-label small fw-medium"
-                                                for="terms-check"
-                                        >
-                                            Wyrażam zgodę na przetwarzanie moich danych osobowych
-                                            podanych w formularzu, celem przygotowania oferty przez
-                                            firmę Frax-Bud -
-                                            <a
-                                                    href="/pl/polityka-prywatnosci/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                            >
-                                                polityka prywatności</a
-                                            >*
-                                        </label>
-                                    </div>
+
+                                    @foreach ($rules as $r)
+                                        <div class="form-check text-start pt-5 d-flex gap-3">
+                                            <input class="form-check-input @if($r->required === 1)validate[required] @endif" type="checkbox" value="1" id="zgoda_{{$r->id}}" name="rule_{{$r->id}}" data-prompt-position="topLeft:0"/>
+                                            <label class="form-check-label small fw-medium" for="zgoda_{{$r->id}}">{!! $r->text !!}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
                                 <div class="col-12 d-flex justify-content-start">
-                                    <button
-                                            data-btn-submit=""
-                                            type="submit"
-                                            class="btn btn-primary mt-5 btn-submit"
-                                            disabled=""
-                                    >
-                                        <span> Wyślij </span>
-                                    </button>
+                                    <input name="form_page" type="hidden" value="Kontakt">
+                                    <script type="text/javascript">
+                                        document.write("<button data-btn-submit=\"\" type=\"submit\" class=\"btn btn-primary mt-5 btn-submit\"><span> Wyślij </span></button>");
+                                    </script>
+                                    <noscript><p><b>Do poprawnego działania, Java musi być włączona.</b></p></noscript>
                                 </div>
                             </form>
                         </div>
@@ -1379,3 +1357,26 @@
         </div>
     </main>
 @endsection
+@push('scripts')
+    <div id="root3dEstate"></div>
+    <script src="{{ asset('/js/validation.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/pl.js') }}" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".validateForm").validationEngine({
+                validateNonVisibleFields: true,
+                updatePromptsPosition:true,
+                promptPosition : "topRight:-137px"
+            });
+        });
+        @if (session('success')||session('warning'))
+        $(window).load(function() {
+            const aboveHeight = $('header').outerHeight();
+            $('html, body').stop().animate({
+                scrollTop: $('.alert').offset().top-aboveHeight
+            }, 1500, 'easeInOutExpo');
+        });
+        @endif
+    </script>
+@endpush
