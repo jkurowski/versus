@@ -23,7 +23,7 @@
                             <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan">
                             <map name="invesmentplan">
                                 @foreach($floors as $floor)
-                                    @if($floor->html)
+                                    @if($floor->html && $floor->active == 1)
                                         <area
                                                 shape="poly"
                                                 href="{{route('front.investment.floor', [$floor->building, $floor, Str::slug($floor->name)])}}"
