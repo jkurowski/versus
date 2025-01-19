@@ -738,7 +738,7 @@
                             kąpielisko <br />
                             Zakrzówek
                         </div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">3,7 km</div>
                     </div>
                 </div>
                 <!-- 5 -->
@@ -825,7 +825,7 @@
                             </svg>
                         </div>
                         <div class="location-feature-title">przedszkole</div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">300 m</div>
                     </div>
                 </div>
                 <!-- 6 -->
@@ -883,7 +883,7 @@
                             </svg>
                         </div>
                         <div class="location-feature-title">My Fitness Place</div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">550 m</div>
                     </div>
                 </div>
                 <!-- 7 -->
@@ -988,7 +988,7 @@
                             siłownia i basen <br />
                             J&J Sport
                         </div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">1,8 km</div>
                     </div>
                 </div>
                 <!-- 8 -->
@@ -1271,7 +1271,7 @@
                             </svg>
                         </div>
                         <div class="location-feature-title">Rynek Główny</div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">7 km</div>
                     </div>
                 </div>
                 <!-- 9 -->
@@ -1401,7 +1401,7 @@
                             pętla <br />
                             Czerwone Maki
                         </div>
-                        <div class="location-feature-distance">200 m</div>
+                        <div class="location-feature-distance">900 m</div>
                     </div>
                 </div>
                 <!-- 11 -->
