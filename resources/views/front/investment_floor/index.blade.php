@@ -64,12 +64,13 @@
                                                 title="<h4 class='mb-2'>{{$r->name}}</h4>
                                                 <ul class='mb-0 list-unstyled mt-0'>
                                                 <li>Powierzchnia: <b class=fr>{{$r->area}} m<sup>2</sup></b></li>
-
-                                                @if($r->price_promotion)
-                                                <li>Cena: <b class=fr>@money($r->price_promotion)</b></li>
-                                                @else
-                                                    @if($r->price)
-                                                    <li>Cena: <b class=fr>@money($r->price)</b></li>
+                                                @if($r->show_prices)
+                                                    @if($r->price_promotion)
+                                                    <li>Cena: <b class=fr>@money($r->price_promotion)</b></li>
+                                                    @else
+                                                        @if($r->price)
+                                                        <li>Cena: <b class=fr>@money($r->price)</b></li>
+                                                        @endif
                                                     @endif
                                                 @endif
 

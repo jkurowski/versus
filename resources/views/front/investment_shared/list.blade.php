@@ -24,16 +24,18 @@
                         @endif
                     </div>
                     <div class="ap-info-price">
-                        @if($room->price_promotion)
-                        <span class="promotion">Promocja</span>
-                        @endif
-                        <span class="tag">Cena:</span>
+                        @if($room->show_prices)
                             @if($room->price_promotion)
-                            <span class="price">@money($room->price_promotion)</span>
-                            <span class="price-cross">@money($room->price)</span>
-                            @if($room->price_30)<span class="signature text-center">najniższa cena sprzed 30 dni:<br> @money($room->price_30)</span>@endif
-                        @else
-                            <span class="price">{{ $room->price }} zł</span>
+                            <span class="promotion">Promocja</span>
+                            @endif
+                            <span class="tag">Cena:</span>
+                                @if($room->price_promotion)
+                                <span class="price">@money($room->price_promotion)</span>
+                                <span class="price-cross">@money($room->price)</span>
+                                @if($room->price_30)<span class="signature text-center">najniższa cena sprzed 30 dni:<br> @money($room->price_30)</span>@endif
+                            @else
+                                <span class="price">{{ $room->price }} zł</span>
+                            @endif
                         @endif
                     </div>
                     <div class="ap-info-data">
