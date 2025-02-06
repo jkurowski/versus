@@ -49,7 +49,7 @@
             <div class="row gy-3 gy-lg-0">
                 <div class="col-lg-5">
                     <div class="apartment-box">
-                        <div class="apartment-tag bg-success mb-4" data-aos="fade-up">
+                        <div class="apartment-tag {{ roomStatusBadge($room->status) }} mb-4" data-aos="fade-up">
                             {{ roomStatus($property->status )}}
                         </div>
                         <div
