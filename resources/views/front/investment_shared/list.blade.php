@@ -5,7 +5,7 @@
                 <!-- bg-success - dostępne -->
                 <!-- bg-warning - rezerwacja -->
                 <!-- bg-danger - sprzedane -->
-                <div class="ap-tag bg-success">dostępne</div>
+                <div class="ap-tag bg-success">{{ roomStatus($room->status) }}</div>
                 <div class="ap-info-box">
                     <div class="ap-info-name">
                         <div class="ap-info-svg">
