@@ -26,9 +26,11 @@
                                     <img src="{{ asset('images/logo-sm-black.svg') }}" alt="Logo Osiedle Versus" width="50" height="34"/>
                                 </div>
                                 <div class="title-tag" data-aos="fade-up">{{ $g->name }}</div>
+                                @if($g->text)
                                 <div class="header-2 mb-3 mb-lg-5" data-aos="fade" data-aos-delay="300">
                                     {{ $g->text }}
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
