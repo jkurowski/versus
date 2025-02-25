@@ -26,10 +26,10 @@
                     <div class="ap-info-price">
                         @if($room->show_prices)
                             @if($room->price_promotion)
-                            <span class="promotion">Promocja</span>
+                                <span class="promotion">Promocja</span>
                             @endif
                             <span class="tag">Cena:</span>
-                                @if($room->price_promotion)
+                            @if($room->price_promotion)
                                 <span class="price">@money($room->price_promotion)</span>
                                 <span class="price-cross">@money($room->price)</span>
                                 @if($room->price_30)<span class="signature text-center">najniższa cena sprzed 30 dni:<br> @money($room->price_30)</span>@endif
@@ -50,7 +50,9 @@
                         <span class="tag">Piętro:</span>
                         <span class="data">{{$room->floor->number}}</span>
                     </div>
-                    <a href="{{route('front.investment.property', ['investment_id' => $room->investment_id, 'floor' => $room->floor_id, 'property' => $room->id])}}" class="btn btn-primary"><span>zobacz</span></a>
+                    @if($room->status <> 3)
+                        <a href="{{route('front.investment.property', ['investment_id' => $room->investment_id, 'floor' => $room->floor_id, 'property' => $room->id])}}" class="btn btn-primary"><span>zobacz</span></a>
+                    @endif
                 </div>
             </div>
         </div>
