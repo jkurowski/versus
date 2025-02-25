@@ -5461,6 +5461,10 @@ fieldset:disabled .btn {
   flex: 1 1 auto;
   padding: var(--bs-modal-padding);
 }
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+}
 .modal-footer {
   display: flex;
   flex-shrink: 0;
