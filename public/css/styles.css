@@ -5464,6 +5464,10 @@ fieldset:disabled .btn {
 .modal-body img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+.modal-body p {
+  margin-bottom: 0;
 }
 .modal-footer {
   display: flex;
