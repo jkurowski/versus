@@ -62,6 +62,20 @@
                                 '3' => 'Parking naziemny',
                                 '4' => 'Parking podziemny'
                         ]])
+
+                        @include('form-elements.html-select', [
+                            'label' => 'Budynek',
+                            'name' => 'building_id',
+                            'selected' => $entry->building_id,
+                            'select' => [
+                                '1' => 'B1',
+                                '2' => 'B2',
+                                '3' => 'B3A',
+                                '4' => 'B3B',
+                                '5' => 'B4A',
+                                '6' => 'B4B'
+                        ]])
+
                         @include('form-elements.input-text', ['label' => 'Nazwa piętra', 'name' => 'name', 'value' => $entry->name, 'required' => 1])
                         @include('form-elements.html-input-text-count', ['label' => 'Nagłówek strony', 'sublabel'=> 'Meta tag - title', 'name' => 'meta_title', 'value' => $entry->meta_title, 'maxlength' => 60])
                         @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
