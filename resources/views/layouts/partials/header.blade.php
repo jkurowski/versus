@@ -122,8 +122,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span>Garaże</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/1/p/7,garaz/">Budynek B1</a></li>
-                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/2/p/8,garaz/">Budynek B2</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/6/p/38,garaz/">Garaż 15</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/5/p/37,garaz/">Garaż 17</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/4/p/36,garaz/">Garaż 19</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/3/p/35,garaz/">Garaż 21</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/2/p/8,garaz/">Garaż 23</a></li>
+                            <li><a class="dropdown-item" href="/pl/mieszkania/budynek/1/p/7,garaz/">Garaż 25</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
