@@ -78,7 +78,7 @@ class Property extends Model
         }
 
         $query->where('active', '=', 1);
-        $query->where('status', '!=', 3);
+        $query->where('status', '=', 2);
         return $query->first();
     }
 
@@ -103,7 +103,7 @@ class Property extends Model
         }
 
         $query->where('active', '=', 1);
-        $query->where('status', '!=', 3);
+        $query->where('status', '=', 2);
         return $query->first();
     }
 
