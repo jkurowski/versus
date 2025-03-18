@@ -73,12 +73,12 @@ class Property extends Model
         if ($floor_id) {
             $query->where('floor_id', $floor_id);
         }
-        if ($status) {
-            $query->where('status', $status);
-        }
+//        if ($status) {
+//            $query->where('status', $status);
+//        }
 
         $query->where('active', '=', 1);
-        $query->where('status', '=', 2);
+        $query->where('status', '!=', 3);
         return $query->first();
     }
 
@@ -98,12 +98,12 @@ class Property extends Model
         if ($floor_id) {
             $query->where('floor_id', $floor_id);
         }
-        if ($status) {
-            $query->where('status', $status);
-        }
+//        if ($status) {
+//            $query->where('status', $status);
+//        }
 
         $query->where('active', '=', 1);
-        $query->where('status', '=', 2);
+        $query->where('status', '!=', 3);
         return $query->first();
     }
 
