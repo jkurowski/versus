@@ -84,7 +84,7 @@
                 </div>
             </div>
 
-            @if($floor->id <> 7 && $floor->id <> 8)
+            @if($floor->type <> 3 && $floor->type <> 4)
             <!-- FORM -->
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 apartments-form-col h-auto">
