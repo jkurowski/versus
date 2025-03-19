@@ -117,7 +117,7 @@
 
     <section>
         <div class="container">
-            @if($floor->id <> 7 && $floor->id <> 8)
+            @if($floor->type <> 3 && $floor->type <> 4)
             <div class="row apartment-row align-items-center">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="row-grid-btns py-4">
