@@ -162,19 +162,8 @@
                                 osiedla Versus
                             </div>
                             <div class="" data-aos="fade-up" data-aos-delay="200">
-                                <p class="paragraph text-pretty mb-4">
-                                    Osiedle Versus to idealne połączenie mieszkania w mieście z
-                                    bliskością natury. Budynki znajdują się przy ulicy Jana
-                                    Kantego Federowicza, w sąsiedztwie centrum handlowego ATUT
-                                    Czerwona Maki, gdzie do dyspozycji są liczne sklepy,
-                                    siłownie, punkty usługowe. W niedalekim sąsiedztwie są
-                                    szkoły, przedszkola, Uniwersytet Jagielloński.
-                                </p>
-                                <p class="paragraph text-pretty mb-3 mb-md-5">
-                                    Osiedle będzie się składało z sześciu budynków
-                                    wielorodzinnych, które zostały podzielone na trzy etapy
-                                    realizacji. Pierwszy etap obejmuje budynki 25 i 27.
-                                </p>
+                                <p class="paragraph text-pretty mb-4">Osiedle Versus to idealne połączenie miejskiej wygody z bliskością natury.  Budynki są zlokalizowane przy ul. Jana Kantego Federowicza, w pobliżu centrum handlowego ATUT Czerwona Maki, oferującego liczne sklepy, siłownie oraz punkty usługowe. W niedalekiej okolicy znajdują się szkoły, przedszkola oraz Uniwersytet Jagielloński.</p>
+                                <p class="paragraph text-pretty mb-3 mb-md-5">Osiedle składa się z sześciu budynków wielorodzinnych. Prace w pierwszym etapie zostały zakończone. Budynki 23 i 25 są już gotowe do odbioru. Budowa budynków 15, 17, 19, 21 zostanie zakończona w I kw. 2026 r.</p>
                             </div>
                             <a
                                     href="/pl/lokalizacja/"
@@ -670,7 +659,7 @@
                                     z wysokim standardem
                                 </div>
                                 <div class="" data-aos="fade-up" data-aos-delay="200">
-                                    <p class="paragraph text-pretty mb-4 text-white">
+                                    <p class="paragraph text-pretty mb-4 text-white d-none">
                                         W każdym etapie inwestycji zaprojektowano podziemne hale
                                         garażowe z miejscami postojowymi. Pierwszy etap inwestycji
                                         obejmuje dwa nowoczesne budynki wielorodzinne – 25 i 27, w
@@ -678,18 +667,9 @@
                                         podziemne garaże wielostanowiskowe. Zakończenie pierwszego
                                         etapu inwestycji planowane jest na III kwartał 2025 roku.
                                     </p>
-                                    <p class="paragraph text-pretty text-white mb-3 mb-md-5">
-                                        Mieszkania zostały zaprojektowane z myślą o
-                                        funkcjonalności, ergonomii przestrzeni i wysokim
-                                        standardzie wykończenia. Oferujemy lokale o powierzchni od
-                                        33 do 56 m². Mieszkania zlokalizowane na parterze będą
-                                        posiadały przynależne ogródki, a mieszkania na wyższych
-                                        kondygnacjach - szerokie balkony. Każde mieszkanie
-                                        zostanie wyposażone w ogrzewanie podłogowe, klimatyzację
-                                        oraz filtry antysmogowe.
+                                    <p class="paragraph text-pretty text-white mb-3 mb-md-5">Mieszkania zostały zaprojektowane z myślą o funkcjonalności,ergonomii przestrzeni i wysokiej jakości wykończenia. Oferujemy lokale o powierzchni od 32 do 64 m². Mieszkania na parterze mają przynależne ogródki, a te na wyższych kondygnacjach – przestronne balkony lub tarasy. Każde mieszkanie wyposażone jest w ogrzewanie podłogowe, klimatyzację oraz filtry antysmogowe, zapewniając komfort i zdrowe warunki do życia. W ramach każdego etapu inwestycji zaprojektowano podziemne hale garażowe z miejscami postojowymi. W sprzedaży są także zewnętrzne miejsca postojowe.
                                     </p>
                                 </div>
-
                                 <a
                                         href="/pl/o-inwestycji/"
                                         class="btn btn-primary"
@@ -862,31 +842,9 @@
                                     mieszkania
                                 </div>
                                 <div class="" data-aos="fade-up" data-aos-delay="200">
-                                    <p class="paragraph text-pretty mb-4 text-white">
-                                        Osiedle Versus wyróżnia szczególna troska o zdrowie i
-                                        dobre samopoczucie mieszkańców. Wszystkie mieszkania będą
-                                        wyposażone w filtry antysmogowe. Filtry oczyszczają
-                                        powietrze ze smogu, pyłów, kurzu, spalin. Jest to ważny
-                                        aspekt zdrowotny w mieszkaniach zlokalizowanych w centrach
-                                        dużych miast.
-                                    </p>
-                                    <p class="paragraph text-pretty mb-4 text-white">
-                                        Niewątpliwie dużym atutem mieszkań będzie zainstalowana
-                                        klimatyzacja. Klimatyzowane pomieszczenia to komfort pracy
-                                        i relaksu, który powinien towarzyszyć nam każdego dnia.
-                                        Wszystkie mieszkania będą wyposażone w ogrzewanie
-                                        podłogowe. Jest to idealne rozwiązanie dla osób
-                                        cierpiących na alergię lub astmę.
-                                    </p>
-                                    <p class="paragraph text-pretty mb-3 mb-md-5 text-white">
-                                        Dodatkowo ograniczamy koszty związane z opłatami za
-                                        ciepło, ponieważ takie ogrzewanie wymaga niższej
-                                        temperatury czynnika grzewczego niż standardowe. Brak
-                                        kaloryferów to również dodatkowa przestrzeń i łatwiejsza
-                                        aranżacja przestrzeni mieszkalnej.
-                                    </p>
+                                    <p class="paragraph text-pretty mb-4 text-white">Osiedle Versus wyróżnia się dbałością o zdrowie i komfort mieszkańców. Wszystkie lokale zostaną wyposażone w filtry antysmogowe, oczyszczające powietrze ze smogu, pyłów i spalin. Jest to ważny aspekt zdrowotny w mieszkaniach zlokalizowanych w centrach dużych miast.</p>
+                                    <p class="paragraph text-pretty mb-4 text-white">Niewątpliwie dużym atutem mieszkań będzie zainstalowana w standardzie klimatyzacja, która zapewni przyjemną temperaturę nawet w upalne dni. Natomiast ogrzewanie podłogowe pozwoli na efektywną regulację temperatury, obniżając koszty eksploatacji. Brak tradycyjnych grzejników oznacza większą przestrzeń i swobodniejszą aranżację wnętrz.</p>
                                 </div>
-
                                 <a
                                         href="/pl/mieszkania/"
                                         class="btn btn-primary"
@@ -1253,15 +1211,10 @@
                                                 />
                                             </svg>
                                         </div>
-                                        <span
-                                        >ul. Kamieniarska 37,<br />
-                        30-364 Kraków</span
-                                        >
+                                        <span>ul. Federowicza 15, <br>30-392 Kraków</span>
                                     </div>
                                     <!-- PHONE -->
-                                    <div
-                                            class="d-flex flex-sm-column gap-3 contact-info-box-phones"
-                                    >
+                                    <div class="d-flex flex-sm-column gap-3 contact-info-box-phones">
                                         <div class="contact-info-box-data">
                                             <div class="contact-icon">
                                                 <svg

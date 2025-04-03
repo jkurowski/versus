@@ -14,9 +14,6 @@
                         />
                     </a>
                 </div>
-                <p class="footer-logo-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
             </div>
             <div class="col-12 col-md-5 offset-md-1 col-lg-2 col-xl-3">
                 <p class="footer-title pb-4 mb-0">Menu</p>

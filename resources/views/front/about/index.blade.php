@@ -36,25 +36,16 @@
                             w Krakowie
                         </div>
                         <div class="" data-aos="fade-up" data-aos-delay="200">
-                            <p class="paragraph text-pretty mb-4">
-                                Osiedle Versus zlokalizowane jest przy ul. Federowicza w
-                                Krakowie w dobrze skomunikowanej i zagospodarowanej części
-                                miasta.
-                            </p>
-                            <p class="paragraph text-pretty mb-4">
-                                Inwestycja będzie składała się z sześciu budynków
-                                wielorodzinnych. Osiedle podzielone zostało na trzy etapy
-                                realizacji. Obecnie wznoszony jest pierwszy etap obejmujący
-                                budynki Federowicza 23 - roboczo oznaczony B2 i Federowicza
-                                25 - roboczo oznaczony B1
-                            </p>
-                            <p class="paragraph text-pretty mb-3 mb-md-5">
-                                W skład pierwszego etapu inwestycji wchodzą dwa dwupiętrowe
-                                budynki wielorodzinne, w których znajduje się łącznie 70
-                                mieszkań oraz dwa podziemne garaże wielostanowiskowe.
-                                Zakończenie pierwszego etapu inwestycji przewidziane jest na
-                                III kwartał 2025 roku
-                            </p>
+                            <p class="paragraph text-pretty mb-4">Osiedle Versus zlokalizowane jest przy ul. Federowicza w Krakowie w dobrze skomunikowanej i w pełni zagospodarowanej części miasta.</p>
+
+
+                            <p class="paragraph text-pretty mb-4">Inwestycja składa się z sześciu nowoczesnych budynków wielorodzinnych i została podzielona na dwa etapy realizacji. W sprzedaży dostępne są już wszystkie bloki oznaczone numerami 25, 23, 21, 19, 17 i 15.</p>
+
+
+                            <p class="paragraph text-pretty mb-4">Pierwszy etap inwestycji to dwa dwupiętrowe budynki wielorodzinne, w których znajduje się łącznie 70 mieszkań oraz dwa podziemne garaże wielostanowiskowe. Prace budowlane w ramach tego etapu zostały już zakończone.</p>
+
+
+                            <p class="paragraph text-pretty mb-4">Drugi etap zakłada budowę czterech budynków – dwóch trzypiętrowych i dwóch czteropiętrowych. Łącznie powstanie 214 mieszkań oraz cztery podziemne garaże wielostanowiskowe. Zakończenie realizacji tego etapu przewidziano na II kwartał 2026 roku.</p>
                         </div>
                     </div>
                 </div>
@@ -535,18 +526,8 @@
                                 z wysokim standardem
                             </div>
                             <div class="" data-aos="fade-up" data-aos-delay="200">
-                                <p class="paragraph text-pretty mb-4 text-white">
-                                    Mieszkania zaprojektowano z myślą o funkcjonalności i
-                                    ergonomii przestrzeni oraz wysokim standardzie
-                                    wykończenia. Oferujemy lokale o powierzchni od 33 do 56
-                                    m2. Mieszkania zlokalizowane na parterze posiadać będą
-                                    przynależne ogródki, natomiast mieszkania na wyższych
-                                    kondygnacjach szerokie balkony.
-                                </p>
-                                <p class="paragraph text-pretty text-white mb-3 mb-md-5">
-                                    Każde mieszkanie będzie wyposażone w ogrzewanie podłogowe,
-                                    klimatyzację, filtry antysmogowe.
-                                </p>
+                                <p class="paragraph text-pretty mb-4 text-white">Mieszkania zostały zaprojektowane z myślą o funkcjonalności, ergonomii przestrzeni oraz wysokim standardzie wykończenia. Oferujemy lokale o powierzchni od 32 do 64 m². Mieszkania na parterze mają przynależne ogródki, a te na wyższych kondygnacjach – przestronne balkony lub tarasy. Każde mieszkanie wyposażone jest w ogrzewanie podłogowe, klimatyzację oraz filtry antysmogowe, zapewniając komfort i zdrowe warunki do życia.</p>
+                                <p class="paragraph text-pretty text-white mb-3 mb-md-5">W ramach każdego etapu inwestycji zaprojektowano podziemne hale garażowe z miejscami postojowymi. W sprzedaży są także zewnętrzne miejsca postojowe.</p>
                             </div>
                         </div>
                     </div>
@@ -878,18 +859,8 @@
                                 pomieszczenia
                             </div>
                             <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-                                <p class="paragraph text-pretty mb-4 text-white">
-                                    Każde mieszkanie będzie posiadało instalację klimatyzacji.
-                                    Klimatyzacja zapewnia komfort cieplny w czasie upałów.
-                                    Zbyt wysoka temperatura sprawia że mamy gorsze
-                                    samopoczucie, jest też niebezpieczna dla osób z chorobami
-                                    kardiologicznymi.
-                                </p>
-                                <p class="paragraph text-pretty mb-4 text-white">
-                                    Kiedy na zewnątrz panuje skwar mieszkańcy inwestycji
-                                    osiedle Versus będą odczuwali komfort podczas relaksu w
-                                    swoim domu.
-                                </p>
+                                <p class="paragraph text-pretty mb-4 text-white">Każde mieszkanie zostanie wyposażone w instalację klimatyzacji, która zapewni komfort termiczny nawet w upalne dni. Klimatyzacja pomoże utrzymać przyjemną temperaturę, co ma szczególne znaczenie w okresie wysokich temperatur, zwłaszcza dla osób z chorobami serca i układu krążenia.</p>
+                                <p class="paragraph text-pretty mb-4 text-white">Dzięki temu mieszkańcy mogą cieszyć się chłodnym i komfortowym wnętrzem, niezależnie od warunków zewnętrznych.</p>
                             </div>
                         </div>
                     </div>
@@ -926,20 +897,8 @@
                                 powietrze
                             </div>
                             <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-                                <p class="paragraph text-pretty mb-4 text-white">
-                                    Osiedle Versus wyróżnia szczególna troska o zdrowie i
-                                    dobre samopoczucie mieszkańców. Wszystkie mieszkania będą
-                                    wyposażone w filtry antysmogowe. Filtry oczyszczają
-                                    powietrze ze smogu, pyłów, kurzu, spalin.
-                                </p>
-                                <p class="paragraph text-pretty mb-4 text-white">
-                                    Zainstalowane w nawiewnikach okiennych filtry z
-                                    wielowarstwowej membrany z nanowłókien, ograniczają
-                                    przenikanie zanieczyszczeń do wnętrza mieszkań, a
-                                    jednocześnie zapewniają stały dopływ czystego powietrza.
-                                    Jest to ważny aspekt zdrowotny w mieszkaniach
-                                    zlokalizowanych w centrach dużych miast.
-                                </p>
+                                <p class="paragraph text-pretty mb-4 text-white">Osiedle Versus wyróżnia się szczególną troską o zdrowie i komfort mieszkańców. Wszystkie mieszkania zostaną wyposażone w filtry antysmogowe, które skutecznie oczyszczają powietrze ze smogu, pyłów, kurzu i spalin.</p>
+                                <p class="paragraph text-pretty mb-4 text-white">Filtry, zamontowane w nawiewnikach okiennych, wykorzystują wielowarstwową membranę z nanowłókien, ograniczając przenikanie zanieczyszczeń do wnętrza mieszkań, a jednocześnie zapewniając stały dopływ świeżego powietrza. To istotne rozwiązanie dla osób mieszkających w dużych miastach, gdzie jakość powietrza ma kluczowe znaczenie dla zdrowia i codziennego komfortu.</p>
                             </div>
                         </div>
                     </div>
@@ -1052,12 +1011,7 @@
                             <p
                                     class="paragraph text-pretty mb-4 text-change"
                                     data-aos="fade-up"
-                            >
-                                Inwestycja zaprojektowana została z myślą o osobach
-                                aktywnych poszukujących miejsca tętniącego życiem, w którym
-                                nie można się nudzić. W ofercie znajdują się funkcjonalne
-                                mieszkania dwupokojowe o powierzchniach 32-40 m2.
-                            </p>
+                            >Inwestycja oferuje mieszkania dwupokojowe o powierzchni 32–48 m², zaprojektowane z myślą o osobach aktywnych, które poszukują funkcjonalnych i nowoczesnych przestrzeni w dynamicznej okolicy. Te mieszkania to doskonały wybór dla osób ceniących komfort, wygodę i możliwość korzystania z infrastruktury miejskiej.</p>
                             <a
                                     href="/pl/mieszkania/?rooms=2#room-list"
                                     class="btn btn-primary btn-big"
@@ -1103,13 +1057,7 @@
                                     trzypokojowe
                                 </div>
                             </div>
-                            <p class="paragraph text-pretty mb-4" data-aos="fade-up">
-                                Mieszkania o powierzchni większej niż 50 m2 są to mieszkania
-                                3-pokojowe. Jest to idealne rozwiązanie dla rodzin z
-                                dziećmi, jak również dla wszystkich osób potrzebujących
-                                większej, oddzielnej przestrzeni dla siebie. Największe
-                                lokale w ofercie mają powierzchnię 56 m2.
-                            </p>
+                            <p class="paragraph text-pretty mb-4" data-aos="fade-up">Mieszkania trzypokojowe w Osiedlu Versus to lokale o powierzchni powyżej 46 m², idealne dla rodzin z dziećmi lub osób potrzebujących większej przestrzeni. Największe mieszkania w ofercie mają aż 64 m², zapewniając komfort i wygodę dla każdego, kto szuka przestronnych i funkcjonalnych rozwiązań.</p>
                             <a
                                     href="/pl/mieszkania/?rooms=3#room-list"
                                     class="btn btn-primary btn-big"
@@ -1376,10 +1324,7 @@
                                             />
                                         </svg>
                                     </div>
-                                    <span
-                                    >ul. Kamieniarska 37,<br />
-                        30-364 Kraków</span
-                                    >
+                                    <span>ul. Federowicza 15, <br>30-392 Kraków</span>
                                 </div>
                                 <!-- PHONE -->
                                 <div
