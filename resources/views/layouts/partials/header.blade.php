@@ -12,7 +12,7 @@
                     <span>Skontaktuj się z nami</span>
                 </div>
                 <div class="info-container__phone info-container__box">
-                    <a href="tel:+48570570700" aria-label="Zadzwoń do nas">
+                    <a href="tel:+48570370403" aria-label="Zadzwoń do nas">
                         <div class="contact-icon">
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
                                 />
                             </svg>
                         </div>
-                        +48 570 570 700
+                        +48 570 370 403
                     </a>
                 </div>
                 <div class="info-container__phone info-container__box">
@@ -153,7 +153,7 @@
                     </li>
                     <li class="nav-item mt-3 d-flex justify-content-between li-hidden li-contact-mobile">
                         <div class="info-container__phone info-container__box">
-                            <a href="tel:+48570570700" aria-label="Zadzwoń do nas">
+                            <a href="tel:+48570370403" aria-label="Zadzwoń do nas">
                                 <div class="contact-icon">
                                     <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@
                                         />
                                     </svg>
                                 </div>
-                                +48 570 570 700
+                                +48 570 370 403
                             </a>
                         </div>
                         <div class="info-container__phone info-container__box">

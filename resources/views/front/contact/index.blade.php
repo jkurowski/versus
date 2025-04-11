@@ -51,7 +51,7 @@
                 <div class="col-lg-5 offset-lg-1" data-aos="fade">
                     <p class="paragraph text-pretty">
                         Skontaktuj się z nami dzisiaj pod numerem telefonu
-                        <a href="tel:+48570570700">570 570 700</a>
+                        <a href="tel:+48570370403">570 370 403</a> lub <a href="tel:+48570570654">570 570 654</a>
                         lub napisz wiadomość e-mail na adres
                         <a href="mailto:biuro@fraxbud.pl">biuro@fraxbud.pl</a> Chętnie
                         pomożemy Ci znaleźć wymarzone mieszkanie i zrealizować Twoje
@@ -379,6 +379,49 @@
                                                 </svg>
                                             </div>
                                             <span>pn - pt<br />9:00 - 17:00</span>
+                                        </div>
+                                        <!-- PHONE -->
+                                        <div class="d-flex flex-sm-column gap-3 contact-info-box-phones">
+                                            <div class="contact-info-box-data">
+                                                <div class="contact-icon">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="10.05"
+                                                        height="10.05"
+                                                        viewBox="0 0 10.05 10.05"
+                                                    >
+                                                        <path
+                                                            id="Icon_material-local-phone"
+                                                            data-name="Icon material-local-phone"
+                                                            d="M6.521,8.85a8.458,8.458,0,0,0,3.68,3.68L11.429,11.3a.555.555,0,0,1,.57-.134,6.369,6.369,0,0,0,1.993.318.56.56,0,0,1,.558.558v1.949a.56.56,0,0,1-.558.558A9.491,9.491,0,0,1,4.5,5.058.56.56,0,0,1,5.058,4.5H7.013a.56.56,0,0,1,.558.558,6.343,6.343,0,0,0,.318,1.993.56.56,0,0,1-.14.57Z"
+                                                            transform="translate(-4.5 -4.5)"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <a href="tel:+48570370403" aria-label="Zadzwoń do nas">
+                                                    570 370 403
+                                                </a>
+                                            </div>
+                                            <div class="contact-info-box-data">
+                                                <div class="contact-icon">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="10.05"
+                                                        height="10.05"
+                                                        viewBox="0 0 10.05 10.05"
+                                                    >
+                                                        <path
+                                                            id="Icon_material-local-phone"
+                                                            data-name="Icon material-local-phone"
+                                                            d="M6.521,8.85a8.458,8.458,0,0,0,3.68,3.68L11.429,11.3a.555.555,0,0,1,.57-.134,6.369,6.369,0,0,0,1.993.318.56.56,0,0,1,.558.558v1.949a.56.56,0,0,1-.558.558A9.491,9.491,0,0,1,4.5,5.058.56.56,0,0,1,5.058,4.5H7.013a.56.56,0,0,1,.558.558,6.343,6.343,0,0,0,.318,1.993.56.56,0,0,1-.14.57Z"
+                                                            transform="translate(-4.5 -4.5)"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <a href="tel:+48570570654" aria-label="Zadzwoń do nas">
+                                                    570 570 654
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
