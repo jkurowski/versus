@@ -130,8 +130,8 @@
                                     />
                                 </svg>
                             </div>
-                            ul. Kamieniarska 37, <br />
-                            30-364 Kraków
+                            ul. Federowicza 15, <br />
+                            30-392 Kraków
                         </div>
                     </li>
                 </ul>
