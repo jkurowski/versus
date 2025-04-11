@@ -140,7 +140,7 @@
                 <p class="footer-title pb-4 mb-0">SOCIAL MEDIA</p>
                 <ul class="list-unstyled footer-icons">
                     <li class="nav-item pb-3">
-                        <a href="https://www.facebook.com/" aria-label="facebook">
+                        <a href="https://www.facebook.com/FraxBudPl/" aria-label="facebook" target="_blank">
                             <div class="contact-icon">
                                 <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -159,26 +159,7 @@
                         </a>
                     </li>
                     <li class="nav-item pb-3">
-                        <a href="https://www.linkedin.com/" aria-label="linkedin">
-                            <div class="contact-icon">
-                                <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="10.882"
-                                        height="10.399"
-                                        viewBox="0 0 10.882 10.399"
-                                >
-                                    <path
-                                            id="Icon_zocial-linkedin"
-                                            data-name="Icon zocial-linkedin"
-                                            d="M-.18,1.424A1.131,1.131,0,0,1,.188.557,1.349,1.349,0,0,1,1.144.216a1.309,1.309,0,0,1,.935.336,1.185,1.185,0,0,1,.368.9,1.106,1.106,0,0,1-.357.84,1.351,1.351,0,0,1-.966.347H1.112A1.285,1.285,0,0,1,.177,2.3,1.164,1.164,0,0,1-.18,1.424Zm.137,9.191V3.6H2.288v7.017H-.043Zm3.624,0H5.912V6.7A1.512,1.512,0,0,1,6,6.13a1.523,1.523,0,0,1,.446-.6,1.141,1.141,0,0,1,.751-.247q1.176,0,1.176,1.586v3.75H10.7V6.592a3.381,3.381,0,0,0-.735-2.358,2.508,2.508,0,0,0-1.943-.8A2.384,2.384,0,0,0,5.912,4.6v.021H5.9L5.912,4.6v-1H3.581q.021.336.021,2.09t-.021,4.926Z"
-                                            transform="translate(0.18 -0.216)"
-                                    />
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item pb-3">
-                        <a href="https://www.instagram.com/" aria-label="instagram">
+                        <a href="https://www.instagram.com/fraxbud/" aria-label="instagram" target="_blank">
                             <div class="contact-icon">
                                 <svg
                                         xmlns="http://www.w3.org/2000/svg"
