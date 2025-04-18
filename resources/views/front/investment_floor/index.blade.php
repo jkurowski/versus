@@ -64,7 +64,7 @@
                                                 title="<h4 class='mb-2'>{{$r->name}}</h4>
                                                 <ul class='mb-0 list-unstyled mt-0'>
                                                 @if($floor->type == 1)<li>Powierzchnia: <b class=fr>{{$r->area}} m<sup>2</sup></b></li>@endif
-                                                @if($r->show_prices)
+                                                @if($investment->show_prices)
                                                     @if($r->price_promotion)
                                                     <li>Cena: <b class=fr>@money($r->price_promotion)</b></li>
                                                     @else
