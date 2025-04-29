@@ -72,9 +72,28 @@
                             </div>
                             <!-- PRICE -->
                             @if($property->price && $investment->show_prices)
-                            <div class="mb-4">
-                                <div class="apartment-price">@money($property->price)</div>
-                            </div>
+
+                                @if($property->price_promotion)
+                                    <div class="mb-4">
+                                        <div class="apartment-price">@money($property->price_promotion)</div>
+                                        <div class="apartment-price-old"><s>@money($property->price)</s></div>
+                                        @if($property->price && $property->price_promotion)
+                                            @php
+                                                $rabat = $property->price - $property->price_promotion;
+                                            @endphp
+                                            <span class="rabat h4 d-block w-100">Rabat: @money($rabat)</span>
+                                        @endif
+                                        @if($property->price_30)
+                                            <p class="fs-10 mb-0">
+                                                Najniższa cena z ostatnich 30 dni: @money($property->price_30)
+                                            </p>
+                                        @endif
+                                    </div>
+                                @else
+                                <div class="mb-4">
+                                    <div class="apartment-price">@money($property->price)</div>
+                                </div>
+                                @endif
                             @endif
                             <!-- LEVEL - ROOMS - BUTTONS -->
                             <div class="apartment-data-box">
