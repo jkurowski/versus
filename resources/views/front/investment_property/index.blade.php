@@ -71,7 +71,7 @@
                                 <div class="header-2 text-white">{{$property->number}}</div>
                             </div>
                             <!-- PRICE -->
-                            @if($property->price && $investment->show_prices)
+                            @if($property->price && $investment->show_prices && $property->status == 1)
 
                                 @if($property->price_promotion)
                                     <div class="mb-4">
